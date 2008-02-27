@@ -1,3 +1,9 @@
+firmware-nonfree (0.4etch1) stable; urgency=high
+
+  * Build-depend on linux-support-2.6.18-6; closes: #468215.
+
+ -- dann frazier <dannf@debian.org>  Wed, 27 Feb 2008 11:54:52 -0700
+
 firmware-nonfree (0.4) unstable; urgency=low
 
   * Build-depend on linux-support-2.6.18-4; closes: #414773.
