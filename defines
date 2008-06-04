@@ -1,4 +1,6 @@
 [base]
 packages:
+ bnx2
+ iwlwifi
  ipw3945
  qlogic
