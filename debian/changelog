@@ -1,4 +1,4 @@
-firmware-nonfree (0.4+etchnhalf.1) UNRELEASED; urgency=low
+firmware-nonfree (0.4+etchnhalf.1) stable; urgency=low
 
   * Backport iwlwifi and bnx2 firmware from 0.11 release, only used
     in etch by drivers in the etchnhalf kernel.
@@ -6,7 +6,7 @@ firmware-nonfree (0.4+etchnhalf.1) UNRELEASED; urgency=low
   * Correct path to initramfs.conf file in postinst which was preventing
     initramfs updates for qlogic (and now bnx2) fw, closes: #432042
 
- -- dann frazier <dannf@debian.org>  Wed, 04 Jun 2008 01:33:43 -0600
+ -- dann frazier <dannf@debian.org>  Mon, 09 Jun 2008 16:14:40 -0600
 
 firmware-nonfree (0.4etch1) stable; urgency=high
 
