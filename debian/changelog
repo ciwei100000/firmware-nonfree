@@ -1,3 +1,9 @@
+firmware-nonfree (0.14+lenny2) UNRELEASED; urgency=high
+
+  * Add new firmware-bnx2x package (closes: #509646)
+
+ -- dann frazier <dannf@debian.org>  Sun, 02 Aug 2009 09:04:00 -0600
+
 firmware-nonfree (0.14+lenny1) stable; urgency=high
 
   * Updated build-dep to use 2.6.26-2 kernel
