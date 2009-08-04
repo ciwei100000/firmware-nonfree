@@ -1,4 +1,4 @@
-firmware-nonfree (0.14+lenny2) UNRELEASED; urgency=high
+firmware-nonfree (0.14+lenny2) stable; urgency=high
 
   * Add new firmware-bnx2x package (closes: #509646)
 
