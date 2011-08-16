@@ -2,6 +2,7 @@ firmware-nonfree (0.28+squeeze1) UNRELEASED; urgency=low
 
   [ Ben Hutchings ]
   * Add VIA VT6656 firmware for use with vt6656 driver
+  * Add Realtek RTL8105E-1 and RTL8168E-1/2/3 firmware for use with r8169
 
  -- Ben Hutchings <ben@decadent.org.uk>  Sun, 06 Mar 2011 19:03:36 +0000
 
