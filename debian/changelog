@@ -1,4 +1,4 @@
-firmware-nonfree (0.36+wheezy.1) UNRELEASED; urgency=low
+firmware-nonfree (0.36+wheezy.1) unstable; urgency=low
 
   * Update to linux-support-3.2.0-4
   * iwlwifi: Add new driver names and full Intel product names to package
@@ -12,7 +12,7 @@ firmware-nonfree (0.36+wheezy.1) UNRELEASED; urgency=low
   * linux-nonfree: Add ENE UB6250 firmware (Closes: #687737)
   * atheros: Add firmware for newer AR3012 revisions
 
- -- Ben Hutchings <ben@decadent.org.uk>  Sun, 06 Jan 2013 03:54:34 +0000
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 06 Jan 2013 04:17:56 +0000
 
 firmware-nonfree (0.36) unstable; urgency=low
 
