@@ -1,5 +1,6 @@
 firmware-nonfree (0.36+wheezy.1) UNRELEASED; urgency=low
 
+  * Update to linux-support-3.2.0-4
   * iwlwifi: Add new driver names and full Intel product names to package
     description
 
