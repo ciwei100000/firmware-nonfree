@@ -1,12 +1,15 @@
 [base]
-desc: Intel PRO/Wireless 3945 and 802.11n cards
+desc: Intel Wireless cards
 files:
+ intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq
+ intel/ibt-hw-37.7.bseq
  iwlwifi-100-5.ucode
  iwlwifi-105-6.ucode
  iwlwifi-135-6.ucode
  iwlwifi-1000-5.ucode
  iwlwifi-2000-6.ucode
  iwlwifi-2030-6.ucode
+ iwlwifi-3160-7.ucode
  iwlwifi-3945-2.ucode
  iwlwifi-4965-2.ucode
  iwlwifi-5000-2.ucode
@@ -18,13 +21,16 @@ files:
  iwlwifi-6000g2b-6.ucode
  iwlwifi-6050-4.ucode
  iwlwifi-6050-5.ucode
-longdesc: Intel PRO/Wireless 3945ABG,
- Intel Wireless WiFi Link 5100AGN/5300AGN/5350AGN,
- Centrino Wireless-N 100/105/130/135/1000/1030/2200/2230/6150,
- Centrino Advanced-N 6200/6205/6230/6235/6250 and
- Centrino Ultimate-N 6300 cards supported by the iwlegacy/iwl3945 and
+ iwlwifi-7260-7.ucode
+longdesc: Intel Wireless cards supported by the iwlegacy/iwl3945 and
  iwlwifi/iwlagn drivers
 uri: http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git
+
+[intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq_base]
+desc: Intel Wireless 7260 rev 10 Bluetooth firmware 1.80.2.3.d patch
+
+[intel/ibt-hw-37.7.bseq_base]
+desc: Intel Wireless 7260 Bluetooth firmware generic patch
 
 [iwlwifi-100-5.ucode_base]
 desc: Intel Wireless 100 firmware
@@ -43,6 +49,9 @@ desc: Intel Wireless 2200 firmware
 
 [iwlwifi-2030-6.ucode_base]
 desc: Intel Wireless 2230 firmware
+
+[iwlwifi-3160-7.ucode_base]
+desc: Intel Wireless 3160 firmware
 
 [iwlwifi-3945-2.ucode_base]
 desc: Intel Wireless 3945 firmware
@@ -76,3 +85,6 @@ desc: Intel Wireless 6250 firmware
 
 [iwlwifi-6050-5.ucode_base]
 desc: Intel Wireless 6250 firmware
+
+[iwlwifi-7260-7.ucode_base]
+desc: Intel Wireless 7260 firmware
