@@ -1,6 +1,7 @@
 [base]
 desc: Intel Wireless cards
 files:
+ intel/ibt-hw-37.7.10-fw-1.0.2.3.d.bseq
  intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq
  intel/ibt-hw-37.7.bseq
  iwlwifi-100-5.ucode
@@ -10,6 +11,7 @@ files:
  iwlwifi-2000-6.ucode
  iwlwifi-2030-6.ucode
  iwlwifi-3160-7.ucode
+ iwlwifi-3160-8.ucode
  iwlwifi-3945-2.ucode
  iwlwifi-4965-2.ucode
  iwlwifi-5000-2.ucode
@@ -22,12 +24,16 @@ files:
  iwlwifi-6050-4.ucode
  iwlwifi-6050-5.ucode
  iwlwifi-7260-7.ucode
+ iwlwifi-7260-8.ucode
 longdesc: Intel Wireless cards supported by the iwlegacy/iwl3945 and
  iwlwifi/iwlagn drivers
 uri: http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git
 
 [intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq_base]
-desc: Intel Wireless 7260 rev 10 Bluetooth firmware 1.80.2.3.d patch
+desc: Intel Wireless 3160 rev 10 Bluetooth firmware patch
+
+[intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq_base]
+desc: Intel Wireless 7260 rev 10 Bluetooth firmware patch
 
 [intel/ibt-hw-37.7.bseq_base]
 desc: Intel Wireless 7260 Bluetooth firmware generic patch
@@ -51,6 +57,9 @@ desc: Intel Wireless 2200 firmware
 desc: Intel Wireless 2230 firmware
 
 [iwlwifi-3160-7.ucode_base]
+desc: Intel Wireless 3160 firmware
+
+[iwlwifi-3160-8.ucode_base]
 desc: Intel Wireless 3160 firmware
 
 [iwlwifi-3945-2.ucode_base]
@@ -87,4 +96,7 @@ desc: Intel Wireless 6250 firmware
 desc: Intel Wireless 6250 firmware
 
 [iwlwifi-7260-7.ucode_base]
+desc: Intel Wireless 7260 firmware
+
+[iwlwifi-7260-8.ucode_base]
 desc: Intel Wireless 7260 firmware

@@ -31,6 +31,7 @@ files:
  mrvl/sd8688_helper.bin
  mrvl/sd8787_uapsta.bin
  mrvl/sd8797_uapsta.bin
+ mrvl/sd8897_uapsta.bin
  mrvl/usb8797_uapsta.bin
  mwl8k/fmimage_8366.fw
  mwl8k/fmimage_8366_ap-2.fw
@@ -51,7 +52,7 @@ longdesc: wireless network cards with Marvell Libertas 8xxx chips supported
  mwifiex_sdio, mwifiex_usb, mwl8k and usb8xxx drivers
 uri: http://git.kernel.org/?p=linux/kernel/git/firmware/linux-firmware.git
 replaces: libertas-firmware
-conflicts: libertas-firmware (<< 9.70.7.p0.0-2)
+breaks: libertas-firmware (<< 9.70.7.p0.0-2)
 provides: libertas-firmware
 
 [lbtf_usb.bin_base]
@@ -150,7 +151,7 @@ desc: USB8682 firmware
 
 [mrvl/pcie8897_uapsta.bin_base]
 desc: PCIE8897 firmware
-version: 15.69.201.p52
+version: 15.69.2.p11 (WLAN) / 15.28.2.p11 (BT)
 
 [mrvl/sd8688.bin_base]
 desc: SD8688 main code
@@ -165,6 +166,10 @@ version: 14.66.9.p96
 [mrvl/sd8797_uapsta.bin_base]
 desc: SD8797 firmware
 version: 14.66.11.p151
+
+[mrvl/sd8897_uapsta.bin_base]
+desc: SD8897 firmware
+version: 15.69.2.p11 (WLAN) / 15.28.2.p11 (BT)
 
 [mrvl/usb8797_uapsta.bin_base]
 desc: USB8797 firmware
