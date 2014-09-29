@@ -1,8 +1,42 @@
-firmware-nonfree (0.41~bpo70+1) wheezy-backports; urgency=low
+firmware-nonfree (0.43~bpo70+1) wheezy-backports; urgency=medium
 
-  * Update to linux-support-3.13-0.bpo.1
+  * Update to linux-support-3.16-0.bpo.2
 
- -- Ben Hutchings <ben@decadent.org.uk>  Sun, 16 Mar 2014 16:14:16 +0000
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 30 Sep 2014 00:52:35 +0100
+
+firmware-nonfree (0.43) unstable; urgency=medium
+
+  * iwlwifi: Add Intel Wireless 3160, 7260 and 7265 firmware version
+    23.214.9.0 (ABI 9)
+  * samsung: New package containing firmware for Samsung MFC video codecs
+    used in Exynos SoCs (Closes: #749423)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 16 Jun 2014 00:49:44 +0100
+
+firmware-nonfree (0.42) unstable; urgency=medium
+
+  * Update to linux-support-3.14-1
+  * iwlwifi: Update Intel Wireless 3160 and 7260 wifi firmware to version
+    22.24.8.0 (ABI 8)
+  * iwlwifi: Update Intel Wireless 3160 and 7260 Bluetooth firmware, fixing:
+    - Issue with LED blinking
+    - Issue with USB
+    - No SCO data over EHCI
+  * iwlwifi: Add Intel Wireless 7265 wifi and Bluetooth firmware, and
+    Bluetooth firmware for a new revision of Intel Wireless 7260
+  * bnx2x: Add Broadcom NetXtreme II 10Gb firmware version 7.8.19.0 (for
+    Linux 3.15 onward)
+  * bnx2x: Remove Broadcom NetXtreme II 10Gb firmware version 7.8.2.0 (for
+    Linux 3.7-3.9)
+  * linux-nonfree: Add Radeon VCE microcode, MC microcode version 2 and
+    "Mullins"/"Beema" IGP microcode (Closes: #750463)
+  * brcm80211: Add Broadcom BCM43143, BCM43362 and BCM4354 firmware for
+    use with brcmfmac driver
+  * realtek: Add RTL8723AU and RTL8723BE firmware for use with the
+    rtl8723au and rtl8723be drivers
+  * myricom: Update Myri-10G firmware to version 1.4.57
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 03 Jun 2014 23:31:13 +0100
 
 firmware-nonfree (0.41) unstable; urgency=medium
 
