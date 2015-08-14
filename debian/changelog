@@ -1,3 +1,10 @@
+firmware-nonfree (0.44~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+    - Update to linux-support-4.1.0-0.bpo.1
+
+ -- Hector Oron <zumbi@debian.org>  Fri, 14 Aug 2015 19:28:13 +0200
+
 firmware-nonfree (0.44) unstable; urgency=medium
 
   [ Raphaël Hertzog ]
