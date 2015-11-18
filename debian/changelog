@@ -1,3 +1,10 @@
+firmware-nonfree (20151018-2~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+  * Update kernel version to 4.2.0-0.bpo.1
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Wed, 18 Nov 2015 10:18:39 +0100
+
 firmware-nonfree (20151018-2) unstable; urgency=medium
 
   * amd-graphics, misc-nonfree: Add Breaks and Replaces relations to older
