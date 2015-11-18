@@ -1,10 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import os, re, sys, codecs
 
+sys.path.insert(0, "debian/lib/python")
 sys.path.append(sys.argv[1] + "/lib/python")
 
-from debian_linux.config import ConfigParser, SchemaItemList
+from config import Config
 from debian_linux.debian import Package, PackageRelation
 from debian_linux.debian import PackageDescription as PackageDescriptionBase
 import debian_linux.gencontrol
@@ -20,21 +21,21 @@ class PackageDescription(PackageDescriptionBase):
         self.short = []
         self.long = []
         if value is not None:
-            value = value.split(u"\n", 1)
+            value = value.split("\n", 1)
             self.append_short(value[0])
             if len(value) > 1:
                 self.append(value[1])
 
-    def __unicode__(self):
+    def __str__(self):
         wrap = TextWrapper(width = 74, fix_sentence_endings = True).wrap
-        short = u', '.join(self.short)
+        short = ', '.join(self.short)
         long_pars = []
         for t in self.long:
-            if isinstance(t, basestring):
+            if isinstance(t, str):
                 t = wrap(t)
-            long_pars.append(u'\n '.join(t))
-        long = u'\n .\n '.join(long_pars)
-        return short + u'\n ' + long
+            long_pars.append('\n '.join(t))
+        long = '\n .\n '.join(long_pars)
+        return short + '\n ' + long
 
     def append_pre(self, l):
         self.long.append(l)
@@ -51,9 +52,9 @@ Package._fields['Description'] = PackageDescription
 
 class Template(dict):
     _fields = OrderedDict((
-        ('Template', unicode),
-        ('Type', unicode),
-        ('Default', unicode),
+        ('Template', str),
+        ('Type', str),
+        ('Default', str),
         ('Description', PackageDescription),
     ))
 
@@ -65,28 +66,28 @@ class Template(dict):
         except KeyError: pass
         super(Template, self).__setitem__(key, value)
 
-    def iterkeys(self):
-        keys = set(self.keys())
-        for i in self._fields.iterkeys():
-            if self.has_key(i):
+    def keys(self):
+        keys = set(super(Template, self).keys())
+        for i in self._fields.keys():
+            if i in self:
                 keys.remove(i)
                 yield i
         for i in keys:
             yield i
 
-    def iteritems(self):
-        for i in self.iterkeys():
+    def items(self):
+        for i in self.keys():
             yield (i, self[i])
 
-    def itervalues(self):
-        for i in self.iterkeys():
+    def values(self):
+        for i in self.keys():
             yield self[i]
 
 
 class Templates(TemplatesBase):
     # TODO
     def _read(self, name):
-        prefix, id = name.split(u'.', 1)
+        prefix, id = name.split('.', 1)
 
         for dir in self.dirs:
             filename = "%s/%s.in" % (dir, name)
@@ -109,23 +110,23 @@ class Templates(TemplatesBase):
                 line = f.readline()
                 if not line:
                     break
-                line = line.strip(u'\n')
+                line = line.strip('\n')
                 if not line:
                     break
-                if line[0] in u' \t':
+                if line[0] in ' \t':
                     if not last:
                         raise ValueError('Continuation line seen before first header')
                     lines.append(line.lstrip())
                     continue
                 if last:
-                    e[last] = u'\n'.join(lines)
-                i = line.find(u':')
+                    e[last] = '\n'.join(lines)
+                i = line.find(':')
                 if i < 0:
                     raise ValueError("Not a header, not a continuation: ``%s''" % line)
                 last = line[:i]
                 lines = [line[i+1:].lstrip()]
             if last:
-                e[last] = u'\n'.join(lines)
+                e[last] = '\n'.join(lines)
             if not e:
                 break
 
@@ -160,11 +161,11 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
 
         for entry in self.templates["control.binary.meta"]:
             package_binary = self.process_package(entry, {})
-            assert package_binary['Package'].startswith(u'firmware-')
-            package = package_binary['Package'].replace(u'firmware-', u'')
+            assert package_binary['Package'].startswith('firmware-')
+            package = package_binary['Package'].replace('firmware-', '')
 
             f = open('debian/copyright.meta')
-            file("debian/firmware-%s.copyright" % package, 'w').write(f.read())
+            open("debian/firmware-%s.copyright" % package, 'w').write(f.read())
 
             makeflags = MakeFlags()
             makeflags['FILES'] = ''
@@ -196,11 +197,13 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
         binary = self.templates["control.binary"]
         copyright = self.templates["copyright.binary"]
 
-        if os.path.exists('%s/copyright' % package):
-            f = open('%s/copyright' % package)
+        package_dir = "debian/config/%s" % package
+
+        if os.path.exists('%s/copyright' % package_dir):
+            f = open('%s/copyright' % package_dir)
             open("debian/firmware-%s.copyright" % package, 'w').write(f.read())
         else:
-            vars['license'] = codecs.open("%s/LICENSE" % package, 'r', 'utf-8').read()
+            vars['license'] = codecs.open("%s/LICENSE" % package_dir, 'r', 'utf-8').read()
             codecs.open("debian/firmware-%s.copyright" % package, 'w', 'utf-8').write(self.substitute(copyright, vars))
 
         try:
@@ -215,32 +218,31 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
         links = {}
         links_rev = {}
 
-        for root, dirs, files in os.walk(package):
+        # Look for additional and replacement files in binary package config
+        for root, dirs, files in os.walk(package_dir):
             try:
                 dirs.remove('.svn')
             except ValueError:
                 pass
             for f in files:
                 cur_path = root + '/' + f
-                if root != package:
-                    f = root[len(package) + 1 : ] + '/' + f
+                if root != package_dir:
+                    f = root[len(package_dir) + 1 : ] + '/' + f
                 if os.path.islink(cur_path):
                     if f in files_orig:
                         links[f] = os.readlink(cur_path)
-                        link_target = os.path.normpath(
-                            os.path.join(f, '..', links[f]))
-                        links_rev.setdefault(link_target, []).append(f)
                     continue
                 f1 = f.rsplit('-', 1)
                 if f in files_orig:
-                    files_real[f] = f, f, None
+                    files_real[f] = f, cur_path, None
                     continue
                 if len(f1) > 1:
                     f_base, f_version = f1
                     if f_base in files_orig:
                         if f_base in files_real:
                             raise RuntimeError("Multiple files for %s" % f_base)
-                        files_real[f_base] = f_base, f, f_version
+                        files_real[f_base] = f_base, package_dir + '/' + f, \
+                                             f_version
                         continue
                 # Whitelist files not expected to be installed as firmware
                 if f in ['copyright', 'defines', 'LICENSE', 'LICENSE.install',
@@ -248,17 +250,29 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
                     continue
                 files_unused.append(f)
 
-        if files_unused:
-            print >>sys.stderr, 'W: %s: unused files:' % package, \
-                ' '.join(files_unused)
+        # Take all the other files from upstream
+        for f in files_orig:
+            if f not in files_real and f not in links:
+                if os.path.islink(f):
+                    links[f] = os.readlink(f)
+                elif os.path.isfile(f):
+                    files_real[f] = f, f, None
 
-        makeflags['FILES'] = ' '.join(["%s:%s" % (i[1], i[0]) for i in files_real.itervalues()])
+        for f in links:
+            link_target = os.path.normpath(os.path.join(f, '..', links[f]))
+            links_rev.setdefault(link_target, []).append(f)
+
+        if files_unused:
+            print('W: %s: unused files:' % package, ' '.join(files_unused),
+                  file=sys.stderr)
+
+        makeflags['FILES'] = ' '.join(["%s:%s" % (i[1], i[0]) for i in files_real.values()])
         vars['files_real'] = ' '.join(["/lib/firmware/%s" % i for i in config_entry['files']])
 
         makeflags['LINKS'] = ' '.join(["%s:%s" % (link, target)
-                                       for link, target in links.iteritems()])
+                                       for link, target in links.items()])
 
-        files_desc = [u"Contents:"]
+        files_desc = ["Contents:"]
 
         wrap = TextWrapper(width = 71, fix_sentence_endings = True,
                            initial_indent = ' * ',
@@ -272,15 +286,15 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
             if version is None:
                 version = c.get('version')
             try:
-                f = f + u', ' + u', '.join(links_rev[f])
+                f = f + ', ' + ', '.join(links_rev[f])
             except KeyError:
                 pass
             if desc and version:
                 desc = "%s, version %s (%s)" % (desc, version, f)
             elif desc:
-                desc = u"%s (%s)" % (desc, f)
+                desc = "%s (%s)" % (desc, f)
             else:
-                desc = u"%s" % f
+                desc = "%s" % f
             files_desc.extend(wrap(desc))
 
         packages_binary = self.process_packages(binary, vars)
@@ -292,20 +306,20 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
             codecs.open("debian/firmware-%s.postinst" % package, 'w', 'utf-8').write(self.substitute(postinst, vars))
 
         if 'license-accept' in config_entry:
-            license = codecs.open("%s/LICENSE.install" % package, 'r', 'utf-8').read()
+            license = codecs.open("%s/LICENSE.install" % package_dir, 'r', 'utf-8').read()
             preinst = self.templates['preinst.license']
             preinst_filename = "debian/firmware-%s.preinst" % package
             codecs.open(preinst_filename, 'w', 'utf-8').write(self.substitute(preinst, vars))
 
             templates = self.process_templates(self.templates['templates.license'], vars)
-            license_split = re.split(ur'\n\s*\n', license)
+            license_split = re.split(r'\n\s*\n', license)
             templates[0]['Description'].extend(license_split)
             templates_filename = "debian/firmware-%s.templates" % package
             self.write_rfc822(codecs.open(templates_filename, 'w', 'utf-8'), templates)
 
             desc = packages_binary[0]['Description']
             desc.append(
-u"""This firmware is covered by the %s.
+"""This firmware is covered by the %s.
 You must agree to the terms of this license before it is installed."""
 % vars['license-title'])
             packages_binary[0]['Pre-Depends'] = PackageRelation('debconf | debconf-2.0')
@@ -316,7 +330,7 @@ You must agree to the terms of this license before it is installed."""
 
     def process_template(self, in_entry, vars):
         e = Template()
-        for key, value in in_entry.iteritems():
+        for key, value in in_entry.items():
             if isinstance(value, PackageDescription):
                 e[key] = self.process_description(value, vars)
             elif key[:2] == 'X-':
@@ -339,10 +353,10 @@ You must agree to the terms of this license before it is installed."""
                 return vars.get(match.group(2), '')
             else:
                 return vars[match.group(2)]
-        return re.sub(ur'@(\??)([-_a-z]+)@', subst, unicode(s))
+        return re.sub(r'@(\??)([-_a-z]+)@', subst, str(s))
 
     def write(self, packages, makefile):
-        self.write_control(packages.itervalues())
+        self.write_control(packages.values())
         self.write_makefile(makefile)
 
     def write_control(self, list):
@@ -355,49 +369,9 @@ You must agree to the terms of this license before it is installed."""
 
     def write_rfc822(self, f, list):
         for entry in list:
-            for key, value in entry.iteritems():
-                f.write(u"%s: %s\n" % (key, value))
-            f.write(u'\n')
-
-class Config(dict):
-    config_name = "defines"
-
-    schemas = {
-        'base': {
-            'files': SchemaItemList(),
-            'packages': SchemaItemList(),
-            'support': SchemaItemList(),
-        }
-    }
-
-    def __init__(self):
-        self._read_base()
-
-    def _read_base(self):
-        config = ConfigParser(self.schemas)
-        config.read(self.config_name)
-
-        packages = config['base',]['packages']
-
-        for section in iter(config):
-            real = (section[-1],) + section[:-1]
-            self[real] = config[section]
-
-        for package in packages:
-            self._read_package(package)
-
-    def _read_package(self, package):
-        config = ConfigParser(self.schemas)
-        config.read("%s/%s" % (package, self.config_name))
-
-        for section in iter(config):
-            if len(section) > 1:
-                real = (section[-1], package, '_'.join(section[:-1]))
-            else:
-                real = (section[-1], package)
-            s = self.get(real, {})
-            s.update(config[section])
-            self[real] = s
+            for key, value in entry.items():
+                f.write("%s: %s\n" % (key, value))
+            f.write('\n')
 
 if __name__ == '__main__':
     GenControl()()

@@ -1,8 +1,4 @@
 SHELL  := sh -e
-DEB_HOST_ARCH     := $(shell dpkg-architecture -a$(ARCH) -qDEB_HOST_ARCH)
-DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -a$(ARCH) -qDEB_HOST_GNU_TYPE)
-DEB_BUILD_ARCH    := $(shell dpkg-architecture -a$(ARCH) -qDEB_BUILD_ARCH)
-HAVE_MULTIARCH    := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH 2>/dev/null)
 
 export DH_OPTIONS
 
@@ -18,7 +14,7 @@ install:
 	dh_testroot
 	dh_prep
 	@for i in $(FILES); do \
-	  s=$(PACKAGE)/"$${i%:*}"; \
+	  s="$${i%:*}"; \
 	  d=/lib/firmware/"$${i#*:}"; \
 	  echo install -m644 -D "$$s" debian/$(PACKAGE_NAME)"$$d"; \
 	  install -m644 -D "$$s" debian/$(PACKAGE_NAME)"$$d"; \
@@ -31,7 +27,7 @@ install:
 	done
 	dh_bugfiles
 	dh_installchangelogs
-	dh_installdocs
+	dh_installdocs -XTODO
 	dh_installdebconf
 	dh_lintian
 	dh_link
