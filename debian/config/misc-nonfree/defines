@@ -62,8 +62,7 @@ files:
  i915/bxt_dmc_ver1_05.bin
  i915/bxt_dmc_ver1_06.bin
  i915/skl_dmc_ver1.bin
- i915/skl_dmc_ver1_21.bin
- i915/skl_dmc_ver1_22.bin
+ i915/skl_dmc_ver1_23.bin
  i915/skl_guc_ver1.bin
  i915/skl_guc_ver1_1059.bin
  i915/skl_guc_ver4.bin
@@ -74,6 +73,7 @@ files:
  kaweth/trigger_code_fix.bin
  matrox/g200_warp.fw
  matrox/g400_warp.fw
+ mt7601u.bin
  mt7650.bin
  mts_cdma.fw
  mts_edge.fw
@@ -290,13 +290,9 @@ version: 1.05
 desc: Intel "Broxton" DMC firmware
 version: 1.06
 
-[i915/skl_dmc_ver1_21.bin_base]
+[i915/skl_dmc_ver1_23.bin_base]
 desc: Intel "Skylake" DMC firmware
-version: 1.21
-
-[i915/skl_dmc_ver1_22.bin_base]
-desc: Intel "Skylake" DMC firmware
-version: 1.22
+version: 1.23
 
 [i915/skl_guc_ver1_1059.bin_base]
 desc: Intel "Skylake" GuC firmware
@@ -311,6 +307,10 @@ desc: Matrox G200 WARP engine microcode
 
 [matrox/g400_warp.fw_base]
 desc: Matrox G400/G550 WARP engine microcode
+
+[mt7601u.bin_base]
+desc: MediaTek MT7601U firmware
+version: 34
 
 [mt7650.bin_base]
 desc: MediaTek MT7630/MT7650 Bluetooth firmware
