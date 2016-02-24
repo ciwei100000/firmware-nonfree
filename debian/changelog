@@ -1,3 +1,10 @@
+firmware-nonfree (20160110-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+    - Bump kernel version to 4.3.0-0.bpo.1
+
+ -- Héctor Orón Martínez <zumbi@debian.org>  Wed, 24 Feb 2016 10:44:02 +0100
+
 firmware-nonfree (20160110-1) unstable; urgency=medium
 
   * New upstream version
