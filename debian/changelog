@@ -1,3 +1,58 @@
+firmware-nonfree (20160824-1~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports:
+    - Use linux-support-4.7.0-0.bpo.1
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 01 Oct 2016 23:36:12 +0100
+
+firmware-nonfree (20160824-1) unstable; urgency=medium
+
+  * New upstream version
+    - Upstream version is commit 7534e191256629a20c02e04d5f6d0439c48de80a
+      dated 2016-08-24
+    - iwlwifi: Update Bluetooth firmware for Intel Wireless 3160, 7260, 7265
+      and 8260
+    - amd-graphics: Update firmware for "Bonaire", "Carrizo", "Fiji", "Hawaii",
+      "Kabini", "Kaveri", "Mullins", "Stoney", "Tonga" and "Topaz" chips
+    - amd-graphics: Revert change to "Kaveri" MEC firmware included in
+      version 20151207-1
+    - atheros: Update Qualcomm Atheros QCA6174 rev 2.1 and QCA988X firmware
+    - misc-nonfree: Update Ralink RT2760/RT2790/RT2860/RT2890/RT3090 and
+      RT2870/RT3070/RT3071/RT3072 firmware
+    - misc-nonfree: Update Chelsio T4 and T5 firmware
+    - intel-sound: Update Intel "Cherry Trail"/"Braswell" SST DSP firmware
+    - misc-nonfree: Update Intel "Broxton" and "Skylake" DMC firmware
+  * Update to linux-support 4.7.0-1
+  * iwlwifi: Include new firmware for Intel Wireless 3160, 7260 and 7265
+    (ABI 17); 7265D (ABI 17, 21 and 22); 3168, 8000C and 8265 (ABI 21 and 22)
+    (Closes: #808792, #823402, #833355, #833876)
+  * amdgpu: Include new firmware for "Polaris" chips (Closes: #838038)
+  * qlogic: Include new QLogic QL45000 series firmware
+  * brcm80211: Include Broadcom BCM4366 firmware
+  * misc-nonfree: Include Sensoray 2255 firmware for use with the s2255drv
+    driver
+  * ti-connectivity: Update licence text
+  * ti-connectivity: Include new TI WL18xx firmware (ABI 4) (Closes: #816350)
+  * ti-connectivity: Include "ti-connectivity/TIInit_7.2.31.bts" for use with
+    the st_drv driver
+  * atheros: Include firmware for Atheros AR3012 rev 31010100 and Qualcomm
+    Atheros QCA4019, QCA9377, QCA9887, QCA9888, and QCA9984 adapters, and
+    new board configurations for Qualcomm Atheros QCA6174 adapters
+    (Closes: #800820, #832925)
+  * misc-nonfree: Include Terratec H5 DRX-K firmware for use with the
+    em28xx-dvb driver
+  * iwlwifi: Include Intel Wireless 8264 Bluetooth firmware
+  * misc-nonfree: Include Comtrol RocketPort 2 firmware for use with the
+    rp2 driver
+  * misc-nonfree: Include MOXA UPort firmware for use with the mxuport and
+    ti_usb_3410_5052 drivers
+  * intel-sound: Include Intel "Broxton", "Kabylake", and "Skylake" SST DSP
+    firmware
+  * atheros: Suppress lintian warning for reference to GPL where the runtime
+    exception has been used
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sun, 18 Sep 2016 04:15:29 +0100
+
 firmware-nonfree (20160110-1~bpo8+1) jessie-backports; urgency=medium
 
   * Rebuild for jessie-backports.

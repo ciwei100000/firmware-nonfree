@@ -93,6 +93,8 @@ exclude:
  bnx2x/bnx2x-e*-7.8.17.0.fw
 # No Debian release references these versions
  cxgb3/t3fw-7.[01].0.bin
+ cxgb4/t4fw-1.14.4.0.bin
+ cxgb4/t5fw-1.14.4.0.bin
 # No Debian release references this version
  cbfw-3.2.1.1.bin
  ct2fw-3.2.1.1.bin
@@ -120,6 +122,8 @@ exclude:
  ti-connectivity/wl128x-fw-ap.bin
  ti-connectivity/wl12[78]x-fw*-[34]*.bin
  ti-connectivity/wl18xx-fw.bin
+# Driver requesting this was removed upstream before we added the firmware
+ tlg2300_firmware.bin
 # Licenses for these are very unclear
  ueagle-atm/930-fpga.bin
  ueagle-atm/CMV*.bin    

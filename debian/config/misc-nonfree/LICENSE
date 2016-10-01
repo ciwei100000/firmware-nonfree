@@ -275,6 +275,18 @@ License: Binary redistribution (ITEtech)
  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
  PERFORMANCE OF THIS SOFTWARE.
 
+Files: dvb-usb-terratec-h5-drxk.fw
+Copyright: Terratec
+License: Binary redistribution (Terratec)
+ TERRATEC grants permission to use and redistribute these firmware
+ files for use with TERRATEC devices, but not as part of the Linux
+ kernel or in any other form which would require these files themselves
+ to be covered by the terms of the GNU General Public License.
+ .
+ These firmware files are distributed in the hope that they will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
 Files: e100/*
 Copyright: 1999-2001, Intel Corporation
 License: BSD (Intel)
@@ -321,7 +333,7 @@ License: Binary redistribution (ENE)
  NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION
  WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-Files: go7007/s2250-?.fw
+Files: f2255usb.bin, go7007/s2250-?.fw
 Copyright: Sensoray
 License: Redistributable (Sensoray)
  Sensoray grants permission to use and redistribute these firmware
@@ -439,6 +451,26 @@ License: Binary redistribution (Matrox)
  DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
  OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
  OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Files: moxa/*.fw
+Copyright: Moxa Inc.
+License: Binary redistribution (Moxa)
+ The software accompanying this license statement (the “Software”)
+ is the property of Moxa Inc. (the “Moxa”), and is protected by
+ United States and International Copyright Laws and International
+ treaty provisions. No ownership rights are granted by this
+ Agreement or possession of the Software. Therefore, you must treat
+ the Licensed Software like any other copyrighted material. Your
+ rights and obligations in its use are described as follows:
+ .
+ 1. You may freely redistribute this software under this license.
+ 2. You may freely download and use this software on Moxa's device.
+ 3. You may not modify or attempt to reverse engineer the software, or
+    make any attempt to change or even examine the source code of the
+    software.
+ 4. You may not re-license or sub-license the software to any person or
+    business, using any other license.
+ 5. Moxa(r) is worldwide registered trademark.
 
 Files: mt7650.bin
 Copyright: 2013, Ralink, A MediaTek Company
@@ -621,6 +653,18 @@ License: License For Customer Use of NVIDIA Software
 Files: qat_*.bin
 Copyright: 2014, Intel Corporation.
 License: Binary redistribution (Intel)
+
+Files: rp2.fw
+Copyright: 2013, Comtrol Corporation
+License: Binary redistribution (Comtrol)
+ Comtrol grants permission to use and redistribute these firmware
+ files for use with Comtrol devices, but not as part of the Linux
+ kernel or in any other form which would require these files themselves
+ to be covered by the terms of the GNU General Public License.
+ .
+ These firmware files are distributed in the hope that they will be
+ useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+ of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 Files: rt*.bin
 Copyright: 2007, Ralink Technology Corporation

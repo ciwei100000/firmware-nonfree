@@ -29,9 +29,9 @@ files:
  cxgb4/aq1202_fw.cld
  cxgb4/bcm8483.bin
  cxgb4/t4fw.bin
- cxgb4/t4fw-1.14.4.0.bin
+ cxgb4/t4fw-1.15.37.0.bin
  cxgb4/t5fw.bin
- cxgb4/t5fw-1.14.4.0.bin
+ cxgb4/t5fw-1.15.37.0.bin
  dabusb/bitstream.bin
  dabusb/firmware.fw
  dvb-fe-xc4000-1.4.1.fw
@@ -40,6 +40,7 @@ files:
  dvb-usb-dib0700-1.20.fw
  dvb-usb-it9135-01.fw
  dvb-usb-it9135-02.fw
+ dvb-usb-terratec-h5-drxk.fw
  e100/d101m_ucode.bin
  e100/d101s_ucode.bin
  e100/d102e_ucode.bin
@@ -49,6 +50,7 @@ files:
  ene-ub6250/sd_init1.bin
  ene-ub6250/sd_init2.bin
  ene-ub6250/sd_rdwr.bin
+ f2255usb.bin
  go7007/go7007fw.bin
  go7007/go7007tv.bin
  go7007/lr192.fw
@@ -58,21 +60,32 @@ files:
  go7007/s2250-2.fw
  go7007/wis-startrek.fw
  i915/bxt_dmc_ver1.bin
- i915/bxt_dmc_ver1_04.bin
- i915/bxt_dmc_ver1_05.bin
- i915/bxt_dmc_ver1_06.bin
+ i915/bxt_dmc_ver1_07.bin
  i915/skl_dmc_ver1.bin
  i915/skl_dmc_ver1_23.bin
+ i915/skl_dmc_ver1_26.bin
  i915/skl_guc_ver1.bin
- i915/skl_guc_ver1_1059.bin
  i915/skl_guc_ver4.bin
- i915/skl_guc_ver4_3.bin
  kaweth/new_code.bin
  kaweth/new_code_fix.bin
  kaweth/trigger_code.bin
  kaweth/trigger_code_fix.bin
  matrox/g200_warp.fw
  matrox/g400_warp.fw
+ moxa/moxa-1110.fw
+ moxa/moxa-1130.fw
+ moxa/moxa-1131.fw
+ moxa/moxa-1150.fw
+ moxa/moxa-1151.fw
+ moxa/moxa-1250.fw
+ moxa/moxa-1251.fw
+ moxa/moxa-1410.fw
+ moxa/moxa-1450.fw
+ moxa/moxa-1451.fw
+ moxa/moxa-1613.fw
+ moxa/moxa-1618.fw
+ moxa/moxa-1653.fw
+ moxa/moxa-1658.fw
  mt7601u.bin
  mt7650.bin
  mts_cdma.fw
@@ -95,6 +108,7 @@ files:
  qat_c62x.bin
  qat_c62x_mmp.bin
  qat_mmp.bin
+ rp2.fw
  rt2561.bin
  rt2561s.bin
  rt2661.bin
@@ -196,13 +210,13 @@ desc: Chelsio T4 10GBASE-T firmware (AQ1202 PHY)
 [cxgb4/bcm8483.bin_base]
 desc: Chelsio T4 10GBASE-T firmware (BCM84834 PHY)
 
-[cxgb4/t4fw-1.14.4.0.bin_base]
+[cxgb4/t4fw-1.15.37.0.bin_base]
 desc: Chelsio T4 firmware
-version: 1.14.4.0
+version: 1.15.37.0
 
-[cxgb4/t5fw-1.14.4.0.bin_base]
+[cxgb4/t5fw-1.15.37.0.bin_base]
 desc: Chelsio T5 firmware
-version: 1.14.4.0
+version: 1.15.37.0
 
 [dabusb/firmware.fw_base]
 desc: DAB-USB firmware
@@ -232,6 +246,9 @@ desc: DiBcom dib9135 DVB-T USB firmware
 [dvb-usb-it9135-02.fw_base]
 desc: DiBcom dib9135 DVB-T USB firmware
 
+[dvb-usb-terratec-h5-drxk.fw_base]
+desc: Terratec H5 DRX-K firmware
+
 [e100/d101m_ucode.bin_base]
 desc: Intel 82559 D101M microcode
 
@@ -259,6 +276,9 @@ desc: ENE UB6250 SD init stage 2 firmware
 [ene-ub6250/sd_rdwr.bin_base]
 desc: ENE UB6250 SD read/write firmware
 
+[f2255usb.bin_base]
+desc: Sensoray 2255 firmware
+
 [go7007/go7007fw.bin_base]
 desc: Micronas GO7007SB encoder stage 1 firmware
 
@@ -283,27 +303,23 @@ desc: Sensoray S2250 stage 2 firmware
 [go7007/wis-startrek.fw_base]
 desc: WISchip WinFast WalkieTV firmware
 
-[i915/bxt_dmc_ver1_04.bin_base]
+[i915/bxt_dmc_ver1_07.bin_base]
 desc: Intel "Broxton" DMC firmware
-version: 1.04
-
-[i915/bxt_dmc_ver1_05.bin_base]
-desc: Intel "Broxton" DMC firmware
-version: 1.05
-
-[i915/bxt_dmc_ver1_06.bin_base]
-desc: Intel "Broxton" DMC firmware
-version: 1.06
+version: 1.07
 
 [i915/skl_dmc_ver1_23.bin_base]
 desc: Intel "Skylake" DMC firmware
 version: 1.23
 
-[i915/skl_guc_ver1_1059.bin_base]
+[i915/skl_dmc_ver1_26.bin_base]
+desc: Intel "Skylake" DMC firmware
+version: 1.26
+
+[i915/skl_guc_ver1.bin_base]
 desc: Intel "Skylake" GuC firmware
 version: 1.1059
 
-[i915/skl_guc_ver4_3.bin_base]
+[i915/skl_guc_ver4.bin_base]
 desc: Intel "Skylake" GuC firmware
 version: 4.3
 
@@ -312,6 +328,48 @@ desc: Matrox G200 WARP engine microcode
 
 [matrox/g400_warp.fw_base]
 desc: Matrox G400/G550 WARP engine microcode
+
+[moxa/moxa-1110.fw_base]
+desc: MOXA UPort 1110 firmware
+
+[moxa/moxa-1130.fw_base]
+desc: MOXA UPort 1130 firmware
+
+[moxa/moxa-1131.fw_base]
+desc: MOXA UPort 1130I firmware
+
+[moxa/moxa-1150.fw_base]
+desc: MOXA UPort 1150 firmware
+
+[moxa/moxa-1151.fw_base]
+desc: MOXA UPort 1150I firmware
+
+[moxa/moxa-1250.fw_base]
+desc: MOXA UPort 1250 firmware
+
+[moxa/moxa-1251.fw_base]
+desc: MOXA UPort 1250I firmware
+
+[moxa/moxa-1410.fw_base]
+desc: MOXA UPort 1410 firmware
+
+[moxa/moxa-1450.fw_base]
+desc: MOXA UPort 1450 firmware
+
+[moxa/moxa-1451.fw_base]
+desc: MOXA UPort 1450I firmware
+
+[moxa/moxa-1613.fw_base]
+desc: MOXA UPort 1610-16 firmware
+
+[moxa/moxa-1618.fw_base]
+desc: MOXA UPort 1610-8 firmware
+
+[moxa/moxa-1653.fw_base]
+desc: MOXA UPort 1650-16 firmware
+
+[moxa/moxa-1658.fw_base]
+desc: MOXA UPort 1650-8 firmware
 
 [mt7601u.bin_base]
 desc: MediaTek MT7601U firmware
@@ -379,6 +437,9 @@ desc: Intel QAT C62x UOF firmware
 [qat_c62x_mmp.bin_base]
 desc: Intel QAT C62x MMP firmware
 
+[rp2.fw_base]
+desc: Comtrol RocketPort 2 firmware
+
 [rt2561.bin_base]
 desc: Ralink RT2561 (RT2501/RT5201 chipset) firmware
 version: 1.2
@@ -393,11 +454,11 @@ version: 1.2
 
 [rt2860.bin_base]
 desc: Ralink RT2760/RT2790/RT2860/RT2890/RT3090 (RT2700P[D]/RT2700E[D]/RT2800P[D]/RT2800E[D]/RT3000E[D] chipset) firmware
-version: 34
+version: 0.40
 
 [rt2870.bin_base]
 desc: Ralink RT2870/RT3070/RT3071/RT3072 (RT2800U[D] chipset) firmware
-version: 29
+version: 0.36
 
 [rt3071.bin_base]
 desc: Ralink RT3071/RT3072 firmware
