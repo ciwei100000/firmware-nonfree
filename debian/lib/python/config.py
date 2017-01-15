@@ -1,16 +1,22 @@
-from debian_linux.config import ConfigParser, SchemaItemList
+from debian_linux.config import ConfigParser, SchemaItemList, SchemaItemBoolean
 
 class Config(dict):
     config_name = "defines"
 
-    schemas = {
+    top_schemas = {
         'base': {
-            'files': SchemaItemList(),
             'packages': SchemaItemList(),
-            'support': SchemaItemList(),
         },
         'upstream': {
             'exclude': SchemaItemList()
+        }
+    }
+
+    package_schemas = {
+        'base': {
+            'files': SchemaItemList(),
+            'support': SchemaItemList(),
+            'copy': SchemaItemBoolean(),
         }
     }
 
@@ -18,7 +24,7 @@ class Config(dict):
         self._read_base()
 
     def _read_base(self):
-        config = ConfigParser(self.schemas)
+        config = ConfigParser(self.top_schemas)
         config.read("debian/config/%s" % self.config_name)
 
         packages = config['base',]['packages']
@@ -31,7 +37,7 @@ class Config(dict):
             self._read_package(package)
 
     def _read_package(self, package):
-        config = ConfigParser(self.schemas)
+        config = ConfigParser(self.package_schemas)
         config.read("debian/config/%s/%s" % (package, self.config_name))
 
         for section in iter(config):
