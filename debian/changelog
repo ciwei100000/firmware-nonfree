@@ -2,6 +2,10 @@ firmware-nonfree (20161130-3~deb8u1) UNRELEASED; urgency=medium
 
   * Rebuild for jessie:
     - Use linux-support-4.9.0-0.bpo.7
+  * Re-add firmware that may be needed under older kernel versions:
+    - bnx2x: firmware version 7.8.17.0
+    - iwlwifi: firmware ABI 7 and 8
+    - ti-connectivity: TI WL18xx default configuration
 
  -- Ben Hutchings <ben@decadent.org.uk>  Fri, 20 Jul 2018 03:48:51 +0100
 
