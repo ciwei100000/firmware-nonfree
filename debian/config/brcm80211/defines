@@ -1,5 +1,5 @@
 [base]
-desc: Broadcom 802.11 wireless cards
+desc: Broadcom/Cypress 802.11 wireless cards
 files:
  brcm/bcm43xx-0.fw
  brcm/bcm43xx_hdr-0.fw
@@ -18,6 +18,7 @@ files:
  brcm/brcmfmac43362-sdio.bin
  brcm/brcmfmac4339-sdio.bin
  brcm/brcmfmac43455-sdio.bin
+ brcm/brcmfmac43430a0-sdio.bin
  brcm/brcmfmac43430-sdio.bin
  brcm/brcmfmac4350-pcie.bin
  brcm/brcmfmac4350c2-pcie.bin
@@ -31,6 +32,8 @@ files:
  brcm/brcmfmac43602-pcie.bin
  brcm/brcmfmac4366b-pcie.bin
  brcm/brcmfmac4371-pcie.bin
+ brcm/brcmfmac4373.bin
+ brcm/brcmfmac4373-sdio.bin
 longdesc: wireless network cards supported by the brcmsmac or brcmfmac driver
 
 [brcm/bcm43xx-0.fw_base]
@@ -86,8 +89,11 @@ desc: Broadcom BCM4339 firmware
 [brcm/brcmfmac43455-sdio.bin_base]
 desc: Broadcom BCM43455 firmware
 
+[brcm/brcmfmac43430a0-sdio.bin_base]
+desc: Broadcom BCM43430 rev 0 firmware
+
 [brcm/brcmfmac43430-sdio.bin_base]
-desc: Broadcom BCM43430 firmware
+desc: Broadcom BCM43430 rev 1+ firmware
 
 [brcm/brcmfmac4350-pcie.bin_base]
 desc: Broadcom BCM4350 rev 0-4 firmware
@@ -97,7 +103,6 @@ desc: Broadcom BCM4350 rev 5+ firmware
 
 [brcm/brcmfmac4354-sdio.bin_base]
 desc: Broadcom BCM4354 firmware
-version: 7.35.79.57
 
 [brcm/brcmfmac4356-pcie.bin_base]
 desc: Broadcom BCM4356-PCIe firmware
@@ -125,3 +130,9 @@ desc: Broadcom BCM4366 firmware
 
 [brcm/brcmfmac4371-pcie.bin_base]
 desc: Broadcom BCM4371 firmware
+
+[brcm/brcmfmac4373.bin_base]
+desc: Cypress CYW4373-USB firmware
+
+[brcm/brcmfmac4373-sdio.bin_base]
+desc: Cypress CYW4373-SDIO firmware
