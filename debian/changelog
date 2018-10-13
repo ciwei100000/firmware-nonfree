@@ -1,4 +1,4 @@
-firmware-nonfree (20161130-4) UNRELEASED; urgency=medium
+firmware-nonfree (20161130-4) stretch; urgency=medium
 
   * debian/bin/gencontrol.py: Set encoding to UTF-8 globally
   * Add back firmware-{adi,ralink} as transitional packages (Closes: #907320)
@@ -19,7 +19,7 @@ firmware-nonfree (20161130-4) UNRELEASED; urgency=medium
     - BCM43430 (CVE-2017-13077, CVE-2017-13078, CVE-2017-13079, CVE-2017-13080,
       CVE-2017-13081)
 
- -- Ben Hutchings <ben@decadent.org.uk>  Sat, 13 Oct 2018 20:01:34 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 13 Oct 2018 20:27:06 +0100
 
 firmware-nonfree (20161130-3) unstable; urgency=medium
 
