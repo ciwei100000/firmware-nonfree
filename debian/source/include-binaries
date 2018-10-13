@@ -1,4 +1,7 @@
 debian/config/amd-graphics/radeon/si58_mc.bin
+debian/config/bnx2x/bnx2x/bnx2x-e1-7.8.17.0.fw
+debian/config/bnx2x/bnx2x/bnx2x-e1h-7.8.17.0.fw
+debian/config/bnx2x/bnx2x/bnx2x-e2-7.8.17.0.fw
 debian/config/brcm80211/brcm/brcmfmac4339-sdio.bin
 debian/config/brcm80211/brcm/brcmfmac4354-sdio.bin
 debian/config/brcm80211/brcm/brcmfmac4356-pcie.bin
@@ -16,8 +19,13 @@ debian/config/ivtv/v4l-cx2341x-enc.fw
 debian/config/ivtv/v4l-cx2341x-init.mpg
 debian/config/ivtv/v4l-pvrusb2-24xxx-01.fw
 debian/config/ivtv/v4l-pvrusb2-29xxx-01.fw
+debian/config/iwlwifi/iwlwifi-3160-7.ucode
 debian/config/iwlwifi/iwlwifi-3160-14.ucode-25.30.14.0
+debian/config/iwlwifi/iwlwifi-3160-8.ucode
+debian/config/iwlwifi/iwlwifi-7260-7.ucode
+debian/config/iwlwifi/iwlwifi-7260-8.ucode
 debian/config/iwlwifi/iwlwifi-7260-14.ucode-25.30.14.0
+debian/config/iwlwifi/iwlwifi-7265-8.ucode
 debian/config/iwlwifi/iwlwifi-7265-14.ucode-25.30.14.0
 debian/config/iwlwifi/iwlwifi-7265D-14.ucode-25.30.14.0
 debian/config/iwlwifi/iwlwifi-8000C-14.ucode-25.30.14.0
@@ -25,3 +33,4 @@ debian/config/iwlwifi/intel/ibt-11-5.ddc
 debian/config/iwlwifi/intel/ibt-12-16.ddc
 debian/config/misc-nonfree/i915/bxt_guc_ver8_7.bin
 debian/config/misc-nonfree/i915/kbl_guc_ver9_14.bin
+debian/config/ti-connectivity/ti-connectivity/wl18xx-conf.bin
