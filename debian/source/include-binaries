@@ -1,4 +1,10 @@
 debian/config/amd-graphics/radeon/si58_mc.bin
+debian/config/brcm80211/brcm/brcmfmac4339-sdio.bin
+debian/config/brcm80211/brcm/brcmfmac4354-sdio.bin
+debian/config/brcm80211/brcm/brcmfmac4356-pcie.bin
+debian/config/brcm80211/brcm/brcmfmac43340-sdio.bin
+debian/config/brcm80211/brcm/brcmfmac43362-sdio.bin
+debian/config/brcm80211/brcm/brcmfmac43430-sdio.bin
 debian/config/ipw2x00/ipw2100-1.3-i.fw
 debian/config/ipw2x00/ipw2100-1.3-p.fw
 debian/config/ipw2x00/ipw2100-1.3.fw
