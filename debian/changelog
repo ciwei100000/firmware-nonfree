@@ -1,3 +1,86 @@
+firmware-nonfree (20190114-1~bpo9+1) stretch-backports; urgency=medium
+
+  * Rebuild for stretch-backports:
+    - Use linux-support-4.19.0-0.bpo.1
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Fri, 18 Jan 2019 21:28:30 +0000
+
+firmware-nonfree (20190114-1) unstable; urgency=medium
+
+  [ Romain Perier ]
+  * New upstream version:
+    - Upstream version is commit bc656509a3cfb60fcdfc905d7e23c18873e4e7b9
+      dated 2019-01-14
+    - cavium: Cavium CNN55XX crypto firmware update version v10
+    - intel-sound: Intel Cannonlake SST DSP firmware update version
+      10.23.00.1858
+    - misc-nonfree:
+      + Chelsio T4, T5, and T6 firmware version 1.22.9.0
+      + NVIDIA GP102 firmware update
+      + NVIDIA GP104 firmware update
+      + NVIDIA GP106 firmware update
+      + NVIDIA GP107 firmware update
+      + Intel OPA Gen1 DC firmware update version 1.27.0
+    - brcm80211: BCM43362 firmware update
+    - atheros:
+      + firmware update for QCA61x4 version 3.2 USB BT (CVE-2018-5383)
+      + Qualcomm Atheros QCA9984 rev 1.0 board configuration update
+      + Qualcomm Atheros QCA9984 rev 1.0 firmware update version
+        10.4-3.6.0.1-00003
+      + Qualcomm Atheros QCA988X firmware update version 10.2.4-1.0-00041
+      + Qualcomm Atheros QCA9888 rev 2.0 board configuration update
+      + Qualcomm Atheros QCA9888 rev 2.0 firmware update version 10.4-3.6-00140
+      + Qualcomm Atheros QCA9887 rev 1.0 firmware update version
+        10.2.4-1.0-00041
+      + Qualcomm Atheros QCA4019 rev 1.0 board configuration update
+      + Qualcomm Atheros QCA4019 rev 1.0 firmware update version 10.4-3.6-00140
+    - netronome:
+      + Agilio CX 2x10GbE,2x40GbE,2x25GbE flower firmware update version
+        AOTC-2.10.A.13
+      + Agilio SmartNIC firmware update version 2.1.16
+    - iwlwifi:
+      + 9460/9650 (var 16 rev 1) Bluetooth firmware version 20.100.0.3
+      + 9160/9260 (var 16 rev 1) Bluetooth firmware version 20.100.0.3
+      + 8260/8265 Bluetooth firmware version 20.100.0.3
+      + Add Intel Wireless 9000 firmware version 41.fc1a7aea.0
+      + Add Intel Wireless 9260 firmware version 41.fc1a7aea.0
+      + Intel Wireless 9000/9260 firmware update version 38.755cfdd8.0
+      + Intel Wireless 3160,7260,7265 firmware update version 17.bfb58538.0
+      + Intel Wireless 8000C,8265 firmware update version 36.9f0a2d68.0
+    - amd-graphics:
+      + "Polaris10", "Polaris11", "Raven" firmware updates to sync with
+        18.50 release
+      + "Fiji", "Tonga", "Vega10", "Carrizo" firmware updates to sync with
+        18.40 release
+    - libertas: Marvell Avastar 88W8801-USB firmware version 14.68.36.p138
+  * amd-graphics:
+    - Add AMD Vega M firmware (Closes: #907598)
+    - Add Radeon HD 7800 series firmware to /lib/firmware/amdgpu
+      (Closes: #908632)
+  * Update to linux-support 4.19.0-1
+
+  [ Yves-Alexis Perez ]
+  * firmware-linux: fix typo in short description
+  * firmware-atheros: remove unused lintian override
+  * firmware-misc-nonfree: remove unused lintian override
+
+  [ David Lechner ]
+  * ti-connectivity: include TIInit_6.2.31.bts and TIInit_6.6.15.bts for
+    CC2560(A) Bluetooth
+
+  [ Ben Hutchings ]
+  * debian/README.source: Document the genorig.py --commit option
+  * amd-graphics: Add firmware for "Picasso", "Raven 2", and "Vega 12" chips
+  * amd-graphics: Add additional firmware for Radeon HD 7800 series,
+    "Polaris", and "Raven" chips
+  * amd-graphics: Add firmware for older chips supported by amdgpu to
+    /l/f/amdgpu
+  * amd-graphics: Fix quoting in descriptions of Vega M firmware
+  * debian/source/options: Delete redundant compression setting; satisfy
+    lintian
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 15 Jan 2019 22:51:01 +0000
+
 firmware-nonfree (20180825+dfsg-1~bpo9+1) stretch-backports; urgency=medium
 
   * Rebuild for stretch-backports:
