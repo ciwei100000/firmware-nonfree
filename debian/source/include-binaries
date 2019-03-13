@@ -1,4 +1,6 @@
 debian/config/amd-graphics/radeon/si58_mc.bin
+debian/config/atheros/qca/nvm_usb_00000302.bin
+debian/config/atheros/qca/rampatch_usb_00000302.bin
 debian/config/brcm80211/brcm/brcmfmac4339-sdio.bin
 debian/config/brcm80211/brcm/brcmfmac4354-sdio.bin
 debian/config/brcm80211/brcm/brcmfmac4356-pcie.bin
