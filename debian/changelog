@@ -1,10 +1,11 @@
-firmware-nonfree (20161130-5) UNRELEASED; urgency=medium
+firmware-nonfree (20161130-5) stretch; urgency=medium
 
+  [ Emilio Pozuelo Monfort ]
   * CVE-2018-5383:
     - atheros: Update BT firmware files for QCA ROME chip.
     - iwlwifi: Update Intel BT firmware to 20.60.0.2.
 
- -- Emilio Pozuelo Monfort <pochu@debian.org>  Wed, 13 Mar 2019 14:11:18 +0100
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 25 Mar 2019 16:54:32 +0000
 
 firmware-nonfree (20161130-4) stretch; urgency=medium
 
