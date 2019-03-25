@@ -77,7 +77,7 @@ version: REL0082
 
 [intel/ibt-12-16.sfi_base]
 desc: Intel Wireless 8264 Bluetooth firmware
-version: REL0082
+version: REL0226
 
 [intel/ibt-hw-37.7.10-fw-1.0.1.2d.d.bseq_base]
 desc: Intel Wireless 3160 (B6) Bluetooth firmware patch
@@ -89,11 +89,11 @@ version: 86
 
 [intel/ibt-hw-37.7.10-fw-1.80.1.2d.d.bseq_base]
 desc: Intel Wireless 7260 (B5) Bluetooth firmware patch
-version: 39
+version: 42
 
 [intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq_base]
 desc: Intel Wireless 7260 (B3) Bluetooth firmware patch
-version: 86
+version: 87
 
 [intel/ibt-hw-37.7.bseq_base]
 desc: Intel Wireless 7260 Bluetooth firmware generic patch
@@ -108,7 +108,7 @@ version: 37
 
 [intel/ibt-hw-37.8.10-fw-22.50.19.14.f.bseq_base]
 desc: Intel Wireless 7265 (D1) Bluetooth firmware patch
-version: 20
+version: REL_52_00001
 
 [intel/ibt-hw-37.8.bseq_base]
 desc: Intel Wireless 7265 Bluetooth firmware generic patch
