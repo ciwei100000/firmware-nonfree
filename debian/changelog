@@ -20,6 +20,7 @@ firmware-nonfree (20190717-3) UNRELEASED; urgency=medium
     debian/copyright
   * copyright: Remove support for per-binary-package copyright files
   * Move file exclusions to debian/copyright; replace genorig.py with uscan
+  * lintian: Move source overrides to preferred path
 
  -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 22 Dec 2019 11:07:23 +0100
 
