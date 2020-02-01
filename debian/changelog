@@ -18,6 +18,7 @@ firmware-nonfree (20190717-3) UNRELEASED; urgency=medium
     debian/copyright
   * copyright: Replace debian/copyright.debian with paragraph in
     debian/copyright
+  * copyright: Remove support for per-binary-package copyright files
 
  -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 22 Dec 2019 11:07:23 +0100
 
