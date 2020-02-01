@@ -12,6 +12,7 @@ firmware-nonfree (20190717-3) UNRELEASED; urgency=medium
   * copyright: Fold debian/config/*/copyright into debian/copyright
   * debian/copyright: Fix blank lines that should be contiunation lines
   * debian/copyright: License short names must not have spaces
+  * debian/copyright: Add Copyright field for Conexant firmware
 
  -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 22 Dec 2019 11:07:23 +0100
 
