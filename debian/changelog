@@ -11,6 +11,7 @@ firmware-nonfree (20190717-3) UNRELEASED; urgency=medium
   * debian/upstream/: Add upstream signing key
   * copyright: Fold debian/config/*/copyright into debian/copyright
   * debian/copyright: Fix blank lines that should be contiunation lines
+  * debian/copyright: License short names must not have spaces
 
  -- Salvatore Bonaccorso <carnil@debian.org>  Sun, 22 Dec 2019 11:07:23 +0100
 
