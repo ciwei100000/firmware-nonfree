@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import os, re, sys, locale
+import os, re, sys, locale, codecs
 
 sys.path.insert(0, "debian/lib/python")
 sys.path.append(sys.argv[1] + "/lib/python")
@@ -87,20 +87,23 @@ class Template(dict):
 
 class Templates(TemplatesBase):
     # TODO
-    def _read(self, name):
+     def _read(self, name):
         prefix, id = name.split('.', 1)
 
-        for dir in self.dirs:
-            filename = "%s/%s.in" % (dir, name)
-            if os.path.exists(filename):
-                f = open(filename, 'r')
-                if prefix == 'control':
-                    return read_control(f)
-                elif prefix == 'templates':
-                    return self._read_templates(f)
-                return f.read()
-
-    def _read_templates(self, f):
+        for suffix in ['.in', '']:
+            for dir in self.dirs:
+                filename = "%s/%s%s" % (dir, name, suffix)
+                if os.path.exists(filename):
+                    with codecs.open(filename, 'r', 'utf-8') as f:
+                        mode = os.stat(f.fileno()).st_mode
+                        if prefix == 'control':
+                            return (read_control(f), mode)
+                        elif prefix == 'templates':
+                            return (self._read_templates(f), mode)
+                        return (f.read(), mode)
+    
+    
+     def _read_templates(self, f):
         entries = []
 
         while True:

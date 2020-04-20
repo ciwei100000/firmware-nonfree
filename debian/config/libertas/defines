@@ -18,8 +18,6 @@ files:
  libertas/sd8686_v8_helper.bin
  libertas/sd8686_v9.bin
  libertas/sd8686_v9_helper.bin
- libertas/sd8688.bin
- libertas/sd8688_helper.bin
  libertas/usb8388_olpc.bin
  libertas/usb8388_v5.bin
  libertas/usb8388_v9.bin
