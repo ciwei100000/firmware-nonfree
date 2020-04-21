@@ -1,0 +1,459 @@
+[base]
+desc: Broadcom Bluetooth Firmware
+files:
+ brcm/BCM20702A1-0489-e032.hcd 
+ brcm/BCM20702A1-0489-e042.hcd 
+ brcm/BCM20702A1-0489-e046.hcd 
+ brcm/BCM20702A1-0489-e04f.hcd 
+ brcm/BCM20702A1-0489-e052.hcd 
+ brcm/BCM43142A0-0489-e055.hcd 
+ brcm/BCM20702A1-0489-e059.hcd 
+ brcm/BCM43142A0-0489-e062.hcd 
+ brcm/BCM4335C0-0489-e079.hcd 
+ brcm/BCM20702A1-0489-e07a.hcd 
+ brcm/BCM20702A1-0489-e087.hcd 
+ brcm/BCM43142A0-0489-e096.hcd 
+ brcm/BCM4356A2-0489-e097.hcd 
+ brcm/BCM20703A1-0489-e0a1.hcd 
+ brcm/BCM20702A1-04ca-2003.hcd 
+ brcm/BCM20702A1-04ca-2004.hcd 
+ brcm/BCM20702A1-04ca-2005.hcd 
+ brcm/BCM43142A0-04ca-2006.hcd 
+ brcm/BCM43142A0-04ca-2007.hcd 
+ brcm/BCM43142A0-04ca-2009.hcd 
+ brcm/BCM20702A1-04ca-200a.hcd 
+ brcm/BCM20702A1-04ca-200b.hcd 
+ brcm/BCM20702A1-04ca-200c.hcd 
+ brcm/BCM20702A1-04ca-200e.hcd 
+ brcm/BCM20702A1-04ca-200f.hcd 
+ brcm/BCM43142A0-04ca-2012.hcd 
+ brcm/BCM4356A2-04ca-2013.hcd 
+ brcm/BCM4356A2-04ca-2014.hcd 
+ brcm/BCM4335C0-04ca-2016.hcd 
+ brcm/BCM43142A0-04f2-b49d.hcd 
+ brcm/BCM43142A0-04f2-b4a1.hcd 
+ brcm/BCM4356A2-04f2-b4a2.hcd 
+ brcm/BCM20702A1-050d-065a.hcd 
+ brcm/BCM20702A1-0930-021e.hcd 
+ brcm/BCM43142A0-0930-021f.hcd 
+ brcm/BCM20702A1-0930-0221.hcd 
+ brcm/BCM20702A1-0930-0223.hcd 
+ brcm/BCM43142A0-0930-0225.hcd 
+ brcm/BCM43142A0-0930-0226.hcd 
+ brcm/BCM4335C0-0930-0229.hcd 
+ brcm/BCM43142A0-0a5c-2167.hcd 
+ brcm/BCM4335C0-0a5c-2168.hcd 
+ brcm/BCM20702A1-0a5c-2169.hcd 
+ brcm/BCM43142A0-0a5c-216a.hcd 
+ brcm/BCM20702A1-0a5c-216b.hcd 
+ brcm/BCM43142A0-0a5c-216c.hcd 
+ brcm/BCM43142A0-0a5c-216d.hcd 
+ brcm/BCM4335C0-0a5c-216e.hcd 
+ brcm/BCM20702A1-0a5c-216f.hcd 
+ brcm/BCM43142A0-0a5c-21d3.hcd 
+ brcm/BCM43142A0-0a5c-21d6.hcd 
+ brcm/BCM43142A0-0a5c-21d7.hcd 
+ brcm/BCM43142A0-0a5c-21d8.hcd 
+ brcm/BCM43142A0-0a5c-21dc.hcd 
+ brcm/BCM20702A1-0a5c-21de.hcd 
+ brcm/BCM20702A1-0a5c-21e1.hcd 
+ brcm/BCM20702A1-0a5c-21e3.hcd 
+ brcm/BCM20702A1-0a5c-21e6.hcd 
+ brcm/BCM20702A1-0a5c-21e8.hcd 
+ brcm/BCM20702A1-0a5c-21ec.hcd 
+ brcm/BCM20702A1-0a5c-21f1.hcd 
+ brcm/BCM20702A1-0a5c-21f3.hcd 
+ brcm/BCM20702A1-0a5c-21f4.hcd 
+ brcm/BCM20702A1-0a5c-21fb.hcd 
+ brcm/BCM20702A1-0a5c-21fd.hcd 
+ brcm/BCM43142A0-0a5c-21fe.hcd 
+ brcm/BCM4356A2-0a5c-640a.hcd 
+ brcm/BCM20702A1-0a5c-640b.hcd 
+ brcm/BCM4356A2-0a5c-640e.hcd 
+ brcm/BCM20703A1-0a5c-6410.hcd 
+ brcm/BCM4350C5-0a5c-6412.hcd 
+ brcm/BCM4350C5-0a5c-6413.hcd 
+ brcm/BCM4350C5-0a5c-6414.hcd 
+ brcm/BCM20702A1-0a5c-6417.hcd 
+ brcm/BCM4371C2-0a5c-6418.hcd 
+ brcm/BCM4356A2-0a5c-6419.hcd 
+ brcm/BCM4356A2-0a5c-6420.hcd 
+ brcm/BCM20703A1-0a5c-7460.hcd 
+ brcm/BCM20702A1-0b05-17b5.hcd 
+ brcm/BCM20702A1-0b05-17cb.hcd 
+ brcm/BCM20702A1-0b05-17cf.hcd 
+ brcm/BCM20702A1-0b05-180a.hcd 
+ brcm/BCM4356A2-0b05-181d.hcd 
+ brcm/BCM20703A1-0bb4-0306.hcd 
+ brcm/BCM43142A0-105b-e065.hcd 
+ brcm/BCM20702A1-105b-e066.hcd 
+ brcm/BCM20702A1-13d3-3384.hcd 
+ brcm/BCM43142A0-13d3-3388.hcd 
+ brcm/BCM43142A0-13d3-3389.hcd 
+ brcm/BCM20702A1-13d3-3392.hcd 
+ brcm/BCM20702A1-13d3-3404.hcd 
+ brcm/BCM20702A1-13d3-3411.hcd 
+ brcm/BCM20702A1-13d3-3413.hcd 
+ brcm/BCM20702A1-13d3-3418.hcd 
+ brcm/BCM43142A0-13d3-3427.hcd 
+ brcm/BCM20702A1-13d3-3435.hcd 
+ brcm/BCM20702A1-13d3-3456.hcd 
+ brcm/BCM4356A2-13d3-3473.hcd 
+ brcm/BCM43142A0-13d3-3482.hcd 
+ brcm/BCM43142A0-13d3-3484.hcd 
+ brcm/BCM4356A2-13d3-3485.hcd 
+ brcm/BCM4356A2-13d3-3488.hcd 
+ brcm/BCM4356A2-13d3-3492.hcd 
+ brcm/BCM4371C2-13d3-3504.hcd 
+ brcm/BCM4371C2-13d3-3508.hcd 
+ brcm/BCM20702A1-13d3-3517.hcd 
+ brcm/BCM20702A1-145f-01a3.hcd 
+ brcm/BCM43142A0-185f-2167.hcd 
+ brcm/BCM20702B0-19ff-0239.hcd 
+ brcm/BCM4356A2-2b54-5600.hcd 
+ brcm/BCM4356A2-2b54-5601.hcd 
+ brcm/BCM4356A2-2b54-5602.hcd 
+ brcm/BCM20702A1-413c-8143.hcd 
+ brcm/BCM20702A1-413c-8197.hcd 
+longdesc: firmware of Broadcom WIDCOMM Bluetooth devices (including BCM20702, BCM20703, BCM43142 chipsets and other)
+
+[brcm/BCM20702A1-0489-e032.hcd_base]
+desc: Broadcom 20702 E032 Combo firmware
+ 
+[brcm/BCM20702A1-0489-e042.hcd_base]
+desc: Broadcom 20702A1 Lenovo China standalone firmware
+ 
+[brcm/BCM20702A1-0489-e046.hcd_base]
+desc: Broadcom 20702A1 Acer 43228+20702 combo card firmware
+  
+[brcm/BCM20702A1-0489-e04f.hcd_base]
+desc: Broadcom 20702A1 Lenovo China 43227 WLAN + 20702A1 Combo card firmware
+ 
+[brcm/BCM20702A1-0489-e052.hcd_base]
+desc: Broadcom 20702 non-UHE Generic firmware
+ 
+[brcm/BCM43142A0-0489-e055.hcd_base]
+desc: Broadcom 43142A0 Acer combo firmware
+ 
+[brcm/BCM20702A1-0489-e059.hcd_base]
+desc: Broadcom Acer 43228 + 20702A1 combo firmware
+ 
+[brcm/BCM43142A0-0489-e062.hcd_base]
+desc: Broadcom Sony 43142A0 combo firmware
+ 
+[brcm/BCM4335C0-0489-e079.hcd_base]
+desc: Broadcom Lenovo China 43162 NGFF firmware
+ 
+[brcm/BCM20702A1-0489-e07a.hcd_base]
+desc: Broadcom Lenovo China 4352+20702 NGFF firmware
+ 
+[brcm/BCM20702A1-0489-e087.hcd_base]
+desc: Broadcom Acer 43228 NGFF combo module firmware
+ 
+[brcm/BCM43142A0-0489-e096.hcd_base]
+desc: Broadcom BCM43142A0 firmware
+ 
+[brcm/BCM4356A2-0489-e097.hcd_base]
+desc: Broadcom Acer Foxconn BCM4356A2 NGFF firmware
+ 
+[brcm/BCM20703A1-0489-e0a1.hcd_base]
+desc: Broadcom 20703A1 Lenovo 43602 NGFF combo firmware
+ 
+[brcm/BCM20702A1-04ca-2003.hcd_base]
+desc: Broadcom 20702A1 Lenovo China standalone firmware
+ 
+[brcm/BCM20702A1-04ca-2004.hcd_base]
+desc: Broadcom LiteOn 43228+20702 combo firmware
+ 
+[brcm/BCM20702A1-04ca-2005.hcd_base]
+desc: Broadcom LiteOn 43228+20702 combo firmware
+ 
+[brcm/BCM43142A0-04ca-2006.hcd_base]
+desc: Broadcom LiteOn 43142 combo firmware
+ 
+[brcm/BCM43142A0-04ca-2007.hcd_base]
+desc: Broadcom LiteOn 43142 firmware
+ 
+[brcm/BCM43142A0-04ca-2009.hcd_base]
+desc: Broadcom LiteOn 43142 combo firmware
+ 
+[brcm/BCM20702A1-04ca-200a.hcd_base]
+desc: Broadcom LiteOn 4352 combo firmware
+ 
+[brcm/BCM20702A1-04ca-200b.hcd_base]
+desc: Broadcom LiteOn 4352 combo firmware
+ 
+[brcm/BCM20702A1-04ca-200c.hcd_base]
+desc: Broadcom LiteOn 4352 combo firmware
+ 
+[brcm/BCM20702A1-04ca-200e.hcd_base]
+desc: Broadcom Liteon 43228 NGFF combo firmware
+ 
+[brcm/BCM20702A1-04ca-200f.hcd_base]
+desc: Broadcom Acer_LiteOn BCM20702A1_4352 firmware
+ 
+[brcm/BCM43142A0-04ca-2012.hcd_base]
+desc: Broadcom Acer BCM943142Y NGFF firmware
+ 
+[brcm/BCM4356A2-04ca-2013.hcd_base]
+desc: Broadcom Acer LiteOn BCM4356A2 NGFF firmware
+ 
+[brcm/BCM4356A2-04ca-2014.hcd_base]
+desc: Broadcom Asus LiteOn BCM4356A2 NGFF firmware
+ 
+[brcm/BCM4335C0-04ca-2016.hcd_base]
+desc: Broadcom Lenovo 43162 NGFF combo module firmware
+ 
+[brcm/BCM43142A0-04f2-b49d.hcd_base]
+desc: Broadcom ASUS Chicony BCM43142A0 HM firmware
+ 
+[brcm/BCM43142A0-04f2-b4a1.hcd_base]
+desc: Broadcom ASUS Chicony BCM43142A0 NGFF firmware
+ 
+[brcm/BCM4356A2-04f2-b4a2.hcd_base]
+desc: Broadcom BCM4356A2 firmware
+ 
+[brcm/BCM20702A1-050d-065a.hcd_base]
+desc: Broadcom 20702 standalone firmware
+ 
+[brcm/BCM20702A1-0930-021e.hcd_base]
+desc: Broadcom 20702A1 Toshiba standalone firmware
+ 
+[brcm/BCM43142A0-0930-021f.hcd_base]
+desc: Broadcom Toshiba 43142 firmware
+ 
+[brcm/BCM20702A1-0930-0221.hcd_base]
+desc: Broadcom 20702A1 Toshiba 4352 firmware
+ 
+[brcm/BCM20702A1-0930-0223.hcd_base]
+desc: Broadcom 20702A1 Toshiba 4352 firmware
+ 
+[brcm/BCM43142A0-0930-0225.hcd_base]
+desc: Broadcom Toshiba 43142 combo NGFF firmware
+ 
+[brcm/BCM43142A0-0930-0226.hcd_base]
+desc: Broadcom Toshiba 43142 combo NGFF firmware
+ 
+[brcm/BCM4335C0-0930-0229.hcd_base]
+desc: Broadcom 43162 combo NGFF firmware
+ 
+[brcm/BCM43142A0-0a5c-2167.hcd_base]
+desc: Broadcom BRCM Generic 43142Y (NGFF) firmware
+
+[brcm/BCM4335C0-0a5c-2168.hcd_base]
+desc: Broadcom BRCM Generic 43162Z firmware
+ 
+[brcm/BCM20702A1-0a5c-2169.hcd_base]
+desc: Broadcom BRCM Generic 43228z firmware
+ 
+[brcm/BCM43142A0-0a5c-216a.hcd_base]
+desc: Broadcom Dell DW1708 43142Y combo firmware
+ 
+[brcm/BCM20702A1-0a5c-216b.hcd_base]
+desc: Broadcom HP Rapture 4352z ngff combo firmware
+ 
+[brcm/BCM43142A0-0a5c-216c.hcd_base]
+desc: Broadcom HP Harrier 43142 firmware
+ 
+[brcm/BCM43142A0-0a5c-216d.hcd_base]
+desc: Broadcom HP Hornet 43142Y ngff combo firmware
+ 
+[brcm/BCM4335C0-0a5c-216e.hcd_base]
+desc: Broadcom HP Blackbird 43162 NGFF firmware
+ 
+[brcm/BCM20702A1-0a5c-216f.hcd_base]
+desc: Broadcom Dell DW1560 4352+20702 M.2 firmware 
+[brcm/BCM43142A0-0a5c-21d3.hcd_base]
+desc: Broadcom BRCM Generic 43142A0 RAMUSB firmware
+ 
+[brcm/BCM43142A0-0a5c-21d6.hcd_base]
+desc: Broadcom BRCM Generic 43142A0 RAMUSB (Radio Control Disabled) firmware
+
+[brcm/BCM43142A0-0a5c-21d7.hcd_base]
+desc: Broadcom BRCM Generic 43142A0 RAMUSB firmware
+ 
+[brcm/BCM43142A0-0a5c-21d8.hcd_base]
+desc: Broadcom BRCM Generic 43142A0 RAMUSB firmware
+ 
+[brcm/BCM43142A0-0a5c-21dc.hcd_base]
+desc: Broadcom HP 43142A0 RAMUSB firmware
+ 
+[brcm/BCM20702A1-0a5c-21de.hcd_base]
+desc: Broadcom 4352+20702A1 combo firmware
+ 
+[brcm/BCM20702A1-0a5c-21e1.hcd_base]
+desc: Broadcom 20702A1 non-UHE HP SoftSailing firmware
+ 
+[brcm/BCM20702A1-0a5c-21e3.hcd_base]
+desc: Broadcom 20702A1 non-UHE 4313 combo HP Valentine firmware
+ 
+[brcm/BCM20702A1-0a5c-21e6.hcd_base]
+desc: Broadcom 20702 non-UHE Lenovo Japan firmware
+ 
+[brcm/BCM20702A1-0a5c-21e8.hcd_base]
+desc: Broadcom 20702A1 dongles firmware
+ 
+[brcm/BCM20702A1-0a5c-21ec.hcd_base]
+desc: Broadcom 20702A1 REF6 OTP module standalone firmware
+ 
+[brcm/BCM20702A1-0a5c-21f1.hcd_base]
+desc: Broadcom 43228 combo firmware
+ 
+[brcm/BCM20702A1-0a5c-21f3.hcd_base]
+desc: Broadcom Lenovo Edge 43228 + 20702A1 combo firmware
+ 
+[brcm/BCM20702A1-0a5c-21f4.hcd_base]
+desc: Broadcom Lenovo Edge 4313 + 20702A1 combo firmware
+ 
+[brcm/BCM20702A1-0a5c-21fb.hcd_base]
+desc: Broadcom HP Supra 4352 20702A1 combo firmware
+ 
+[brcm/BCM20702A1-0a5c-21fd.hcd_base]
+desc: Broadcom BRCM Generic 4352z RAMUSB firmware
+ 
+[brcm/BCM43142A0-0a5c-21fe.hcd_base]
+desc: Broadcom HP Vegas 43142 combo firmware
+ 
+[brcm/BCM4356A2-0a5c-640a.hcd_base]
+desc: Broadcom BRCM Generic Reference 4356 firmware
+ 
+[brcm/BCM20702A1-0a5c-640b.hcd_base]
+desc: Broadcom HP Luffy 43228 + 20702 M.2 firmware
+
+[brcm/BCM4356A2-0a5c-640e.hcd_base]
+desc: Broadcom Lenovo 4356 NGFF combo firmware
+ 
+[brcm/BCM20703A1-0a5c-6410.hcd_base]
+desc: Broadcom 20703A1 RAM download - DW1830 43602 firmware
+ 
+[brcm/BCM4350C5-0a5c-6412.hcd_base]
+desc: Broadcom Dell 4350C5 firmware
+ 
+[brcm/BCM4350C5-0a5c-6413.hcd_base]
+desc: Broadcom Broadcom Generic 4350C5 firmware
+ 
+[brcm/BCM4350C5-0a5c-6414.hcd_base]
+desc: Broadcom Lenovo 4350C5 firmware
+ 
+[brcm/BCM20702A1-0a5c-6417.hcd_base]
+desc: Broadcom Zebra 4352 firmware
+ 
+[brcm/BCM4371C2-0a5c-6418.hcd_base]
+desc: Broadcom HP Brook 2x2ac firmware
+ 
+[brcm/BCM4356A2-0a5c-6419.hcd_base]
+desc: Broadcom Huawei 4356A2 firmware
+ 
+[brcm/BCM4356A2-0a5c-6420.hcd_base]
+desc: Broadcom Huawei 4356A2 firmware
+   
+[brcm/BCM20703A1-0a5c-7460.hcd_base]
+desc: Broadcom 20703A1 RAM download firmware
+ 
+[brcm/BCM20702A1-0b05-17b5.hcd_base]
+desc: Broadcom Asus 43228+20702A1 combo firmware
+ 
+[brcm/BCM20702A1-0b05-17cb.hcd_base]
+desc: Broadcom 20702 standalone firmware
+ 
+[brcm/BCM20702A1-0b05-17cf.hcd_base]
+desc: Broadcom Asus 4352_20702A1 combo firmware
+ 
+[brcm/BCM20702A1-0b05-180a.hcd_base]
+desc: Broadcom Azurewave 4360+20702 combo firmware
+ 
+[brcm/BCM4356A2-0b05-181d.hcd_base]
+desc: Broadcom Asus AZUREWAVE MB BCM4356A2 firmware
+ 
+[brcm/BCM20703A1-0bb4-0306.hcd_base]
+desc: Broadcom 20703A1 HTC runtime RAM dongle firmware
+ 
+[brcm/BCM43142A0-105b-e065.hcd_base]
+desc: Broadcom LenovoChina 43142A0 combo firmware
+ 
+[brcm/BCM20702A1-105b-e066.hcd_base]
+desc: Broadcom LenovoChina 43228+20702 combo firmware
+ 
+[brcm/BCM20702A1-13d3-3384.hcd_base]
+desc: Broadcom 20702A1 Azurewave standalone firmware
+ 
+[brcm/BCM43142A0-13d3-3388.hcd_base]
+desc: Broadcom BRCM Generic 43142A0 RAMUSB firmware
+ 
+[brcm/BCM43142A0-13d3-3389.hcd_base]
+desc: Broadcom BRCM Generic 43142A0 RAMUSB firmware
+ 
+[brcm/BCM20702A1-13d3-3392.hcd_base]
+desc: Broadcom Azurewave 43228+20702 firmware
+ 
+[brcm/BCM20702A1-13d3-3404.hcd_base]
+desc: Broadcom 4352HMB Azurewave Module firmware
+ 
+[brcm/BCM20702A1-13d3-3411.hcd_base]
+desc: Broadcom Dell Alienware 4352 20702A1 combo firmware
+ 
+[brcm/BCM20702A1-13d3-3413.hcd_base]
+desc: Broadcom Azurewave 4360+20702 combo firmware
+ 
+[brcm/BCM20702A1-13d3-3418.hcd_base]
+desc: Broadcom Azurewave 4352+20702 combo module firmware
+ 
+[brcm/BCM43142A0-13d3-3427.hcd_base]
+desc: Broadcom Toshiba 43142 combo NGFF firmware
+ 
+[brcm/BCM20702A1-13d3-3435.hcd_base]
+desc: Broadcom AZUREWAVE BCM20702A1_4352 firmware
+ 
+[brcm/BCM20702A1-13d3-3456.hcd_base]
+desc: Broadcom AZUREWAVE BCM20702A1_4352 firmware
+ 
+[brcm/BCM4356A2-13d3-3473.hcd_base]
+desc: Broadcom Asus AZUREWAVE BCM4356A2 NGFF firmware
+ 
+[brcm/BCM43142A0-13d3-3482.hcd_base]
+desc: Broadcom AZUREWAVE BCM43142A0 NGFF firmware
+ 
+[brcm/BCM43142A0-13d3-3484.hcd_base]
+desc: Broadcom Acer AZUREWAVE BCM43142A0 NGFF firmware
+ 
+[brcm/BCM4356A2-13d3-3485.hcd_base]
+desc: Broadcom Asus AZUREWAVE BCM4356A2 NB 2217NF firmware
+ 
+[brcm/BCM4356A2-13d3-3488.hcd_base]
+desc: Broadcom Asus AZUREWAVE BCM4356A2 NB 2210 firmware
+ 
+[brcm/BCM4356A2-13d3-3492.hcd_base]
+desc: Broadcom Asus AZUREWAVE BCM4356A2 NGFF firmware
+ 
+[brcm/BCM4371C2-13d3-3504.hcd_base]
+desc: Broadcom AW CM217NF BCM4371C2 firmware
+ 
+[brcm/BCM4371C2-13d3-3508.hcd_base]
+desc: Broadcom AW ASUS CM217NF BCM4371C2 firmware
+ 
+[brcm/BCM20702A1-13d3-3517.hcd_base]
+desc: Broadcom AW CE160H BCM20702 firmware
+  
+[brcm/BCM20702A1-145f-01a3.hcd_base]
+desc: Broadcom 20702A1 Asus Trust standalone firmware
+ 
+[brcm/BCM43142A0-185f-2167.hcd_base]
+desc: Broadcom LenovoChina_BCM43142A0_1.1.11.197_NGFF firmware
+ 
+[brcm/BCM20702B0-19ff-0239.hcd_base]
+desc: Broadcom Bestbuy 20702B0 micro firmware
+ 
+[brcm/BCM4356A2-2b54-5600.hcd_base]
+desc: Broadcom Emdoor AP6356SD BCM4356A2 firmware
+ 
+[brcm/BCM4356A2-2b54-5601.hcd_base]
+desc: Broadcom Asus AP6356SDP1A BCM4356A2 firmware
+ 
+[brcm/BCM4356A2-2b54-5602.hcd_base]
+desc: Broadcom AMPAK AP6356SDP2A BCM4356A2 firmware
+ 
+[brcm/BCM20702A1-413c-8143.hcd_base]
+desc: Broadcom DW1550 4352+20702 combo firmware
+ 
+[brcm/BCM20702A1-413c-8197.hcd_base]
+desc: Broadcom Dell DW380 Nancy Blakes standalone firmware

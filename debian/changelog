@@ -1,4 +1,4 @@
-firmware-nonfree (20200316-1) UNRELEASED; urgency=medium
+firmware-nonfree (20200421-1) UNRELEASED; urgency=medium
 
   * New upstream version:
     - iwlwifi: update FWs for 3168, 7265D, 9000, 9260, 8000, 8265 and cc
@@ -160,6 +160,7 @@ firmware-nonfree (20200316-1) UNRELEASED; urgency=medium
     - linux-firmware: Update firmware file for Intel Bluetooth 9560
     - linux-firmware: Update firmware file for Intel Bluetooth AX201
     - linux-firmware: Update firmware file for Intel Bluetooth AX200
+    - Add Broadcom Broadcom Bluetooth firmware v12.0.1.1011_p1 release: Source:https://github.com/winterheart/broadcom-bt-firmware
 
   [ Salvatore Bonaccorso ]
   * realtek: Add firmware for Realtek 8822BE/8822CE devices.

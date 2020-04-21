@@ -5,6 +5,7 @@ packages:
  bnx2
  bnx2x
  brcm80211
+ brcmblth
  cavium
  intelwimax
  intel-sound
