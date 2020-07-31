@@ -2,6 +2,18 @@ firmware-nonfree (20190114-2~deb9u1) UNRELEASED; urgency=medium
 
   * Rebuild for stretch:
     - Use linux-support 4.19.0-0.bpo.10
+  * Re-add firmware that may be needed under older kernel versions:
+    - iwlwifi: Intel Wireless 3160, 7260, 7265 firmware versions
+      25.17.12.0, 25.30.14.0, and 16.242414.0
+    - iwlwifi: Intel Wireless 3168 and 8265 firmware version 21.302800.0
+    - iwlwifi: Intel Wireless 5100/5300/5350 firmware version 8.24.2.12
+    - iwlwifi: Intel Wireless 6250 firmware version 9.201.4.1
+    - iwlwifi: Intel Wireless 7265D firmware versions 25.17.12.0,
+      25.30.14.0, 16.242414.0, 17.352738.0, and 21.302800.0
+    - iwlwifi: Intel Wireless 8000C versions 25.30.14.0, 16.242414.0, and
+      21.302800.0
+    - qlogic: QLogic QL45000 series firmware versions 8.4.2.0, 8.7.3.0,
+      and 8.10.5.0
 
  -- Ben Hutchings <benh@debian.org>  Fri, 31 Jul 2020 17:48:12 +0100
 
