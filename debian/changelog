@@ -1,3 +1,10 @@
+firmware-nonfree (20190114-2~deb9u1) UNRELEASED; urgency=medium
+
+  * Rebuild for stretch:
+    - Use linux-support 4.19.0-0.bpo.10
+
+ -- Ben Hutchings <benh@debian.org>  Fri, 31 Jul 2020 17:48:12 +0100
+
 firmware-nonfree (20190114-2~bpo9+1) stretch-backports; urgency=medium
 
   * Rebuild for stretch-backports.
