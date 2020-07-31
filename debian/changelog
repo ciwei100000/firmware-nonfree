@@ -408,6 +408,38 @@ firmware-nonfree (20170823-1) unstable; urgency=medium
 
  -- Ben Hutchings <ben@decadent.org.uk>  Sun, 27 Aug 2017 15:21:48 +0100
 
+firmware-nonfree (20161130-5) stretch; urgency=medium
+
+  [ Emilio Pozuelo Monfort ]
+  * CVE-2018-5383:
+    - atheros: Update BT firmware files for QCA ROME chip.
+    - iwlwifi: Update Intel BT firmware to 20.60.0.2.
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Mon, 25 Mar 2019 16:54:32 +0000
+
+firmware-nonfree (20161130-4) stretch; urgency=medium
+
+  * debian/bin/gencontrol.py: Set encoding to UTF-8 globally
+  * Add back firmware-{adi,ralink} as transitional packages (Closes: #907320)
+  * debian/control: Point Vcs URLs to Salsa
+  * Update to linux-support 4.9.0-8
+  * firmware-brcm80211: Update Broadcom wifi firmware to fix security issues
+    (Closes: #869639):
+    - BCM4339 (CVE-2016-0801)
+    - BCM4354 (CVE-2016-0801, CVE-2017-0561, CVE-2017-9417, CVE-2017-13077,
+      CVE-2017-13078, CVE-2017-13079, CVE-2017-13080, CVE-2017-13081)
+    - BCM4356-PCIe (CVE-2016-0801, CVE-2017-0561, CVE-2017-9417,
+      CVE-2017-13077, CVE-2017-13078, CVE-2017-13079, CVE-2017-13080,
+      CVE-2017-13081)
+    - BCM43340 (CVE-2017-13077, CVE-2017-13078, CVE-2017-13079, CVE-2017-13080,
+      CVE-2017-13081) (also fixes issues when operating in 5GHz band)
+    - BCM43362 (CVE-2017-13077, CVE-2017-13078, CVE-2017-13079, CVE-2017-13080,
+      CVE-2017-13081)
+    - BCM43430 (CVE-2017-13077, CVE-2017-13078, CVE-2017-13079, CVE-2017-13080,
+      CVE-2017-13081)
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Sat, 13 Oct 2018 20:27:06 +0100
+
 firmware-nonfree (20161130-3) unstable; urgency=medium
 
   * misc-nonfree: Include Intel OPA Gen1 firmware (Closes: #862458)
