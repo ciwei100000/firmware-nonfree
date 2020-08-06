@@ -86,6 +86,39 @@ files:
  amdgpu/mullins_sdma1.bin
  amdgpu/mullins_uvd.bin
  amdgpu/mullins_vce.bin
+ amdgpu/navi10_asd.bin
+ amdgpu/navi10_ce.bin
+ amdgpu/navi10_gpu_info.bin
+ amdgpu/navi10_me.bin
+ amdgpu/navi10_mec.bin
+ amdgpu/navi10_mec2.bin
+ amdgpu/navi10_pfp.bin
+ amdgpu/navi10_rlc.bin
+ amdgpu/navi10_sdma.bin
+ amdgpu/navi10_sdma1.bin
+ amdgpu/navi10_smc.bin
+ amdgpu/navi10_sos.bin
+ amdgpu/navi10_ta.bin
+ amdgpu/navi10_vcn.bin
+ amdgpu/navi14_asd.bin
+ amdgpu/navi14_ce.bin
+ amdgpu/navi14_ce_wks.bin
+ amdgpu/navi14_gpu_info.bin
+ amdgpu/navi14_me.bin
+ amdgpu/navi14_me_wks.bin
+ amdgpu/navi14_mec.bin
+ amdgpu/navi14_mec2.bin
+ amdgpu/navi14_mec2_wks.bin
+ amdgpu/navi14_mec_wks.bin
+ amdgpu/navi14_pfp.bin
+ amdgpu/navi14_pfp_wks.bin
+ amdgpu/navi14_rlc.bin
+ amdgpu/navi14_sdma.bin
+ amdgpu/navi14_sdma1.bin
+ amdgpu/navi14_smc.bin
+ amdgpu/navi14_sos.bin
+ amdgpu/navi14_ta.bin
+ amdgpu/navi14_vcn.bin
  amdgpu/oland_ce.bin
  amdgpu/oland_k_smc.bin
  amdgpu/oland_mc.bin
@@ -103,6 +136,7 @@ files:
  amdgpu/picasso_rlc.bin
  amdgpu/picasso_rlc_am4.bin
  amdgpu/picasso_sdma.bin
+ amdgpu/picasso_ta.bin
  amdgpu/picasso_vcn.bin
  amdgpu/pitcairn_ce.bin
  amdgpu/pitcairn_k_smc.bin
@@ -181,18 +215,32 @@ files:
  amdgpu/raven2_pfp.bin
  amdgpu/raven2_rlc.bin
  amdgpu/raven2_sdma.bin
+ amdgpu/raven2_ta.bin
  amdgpu/raven2_vcn.bin
  amdgpu/raven_asd.bin
  amdgpu/raven_ce.bin
  amdgpu/raven_dmcu.bin
  amdgpu/raven_gpu_info.bin
+ amdgpu/raven_kicker_rlc.bin
  amdgpu/raven_me.bin
  amdgpu/raven_mec.bin
  amdgpu/raven_mec2.bin
  amdgpu/raven_pfp.bin
  amdgpu/raven_rlc.bin
  amdgpu/raven_sdma.bin
+ amdgpu/raven_ta.bin
  amdgpu/raven_vcn.bin
+ amdgpu/renoir_asd.bin
+ amdgpu/renoir_ce.bin
+ amdgpu/renoir_dmcub.bin
+ amdgpu/renoir_gpu_info.bin
+ amdgpu/renoir_me.bin
+ amdgpu/renoir_mec.bin
+ amdgpu/renoir_mec2.bin
+ amdgpu/renoir_pfp.bin
+ amdgpu/renoir_rlc.bin
+ amdgpu/renoir_sdma.bin
+ amdgpu/renoir_vcn.bin
  amdgpu/si58_mc.bin
  amdgpu/stoney_ce.bin
  amdgpu/stoney_me.bin
@@ -275,6 +323,7 @@ files:
  amdgpu/vega20_sos.bin
  amdgpu/vega20_uvd.bin
  amdgpu/vega20_vce.bin
+ amdgpu/vega20_ta.bin
  amdgpu/vegam_ce.bin
  amdgpu/vegam_me.bin
  amdgpu/vegam_mec.bin
@@ -791,6 +840,105 @@ desc: Radeon "Mullins"/"Beema" IGP UVD microcode
 [amdgpu/mullins_vce.bin_base]
 desc: Radeon "Mullins"/"Beema" IGP VCE microcode
 
+[amdgpu/navi10_asd.bin_base]
+desc: "Navi 10" ASD firmware
+
+[amdgpu/navi10_ce.bin_base]
+desc: "Navi 10" CE firmware
+
+[amdgpu/navi10_gpu_info.bin_base]
+desc: "Navi 10" GPU info
+
+[amdgpu/navi10_me.bin_base]
+desc: "Navi 10" ME firmware
+
+[amdgpu/navi10_mec.bin_base]
+desc: "Navi 10" MEC firmware
+
+[amdgpu/navi10_mec2.bin_base]
+desc: "Navi 10" MEC2 firmware
+
+[amdgpu/navi10_pfp.bin_base]
+desc: "Navi 10" PFP firmware
+
+[amdgpu/navi10_rlc.bin_base]
+desc: "Navi 10" RLC firmware
+
+[amdgpu/navi10_sdma.bin_base]
+desc: "Navi 10" SDMA firmware
+
+[amdgpu/navi10_sdma1.bin_base]
+desc: "Navi 10" SDMA1 firmware
+
+[amdgpu/navi10_smc.bin_base]
+desc: "Navi 10" SMC firmware
+
+[amdgpu/navi10_sos.bin_base]
+desc: "Navi 10" SOS firmware
+
+[amdgpu/navi10_ta.bin_base]
+desc: "Navi 10" TA firmware
+
+[amdgpu/navi10_vcn.bin_base]
+desc: "Navi 10" VCN firmware
+
+[amdgpu/navi14_asd.bin_base]
+desc: "Navi 14" ASD firmware
+
+[amdgpu/navi14_ce.bin_base]
+desc: "Navi 14" CE firmware
+
+[amdgpu/navi14_ce_wks.bin_base]
+desc: "Navi 14 wks" CE firmware
+
+[amdgpu/navi14_gpu_info.bin_base]
+desc: "Navi 14" GPU info
+
+[amdgpu/navi14_me.bin_base]
+desc: "Navi 14" ME firmware
+
+[amdgpu/navi14_me_wks.bin_base]
+desc: "Navi 14 wks" ME firmware
+
+[amdgpu/navi14_mec.bin_base]
+desc: "Navi 14" MEC firmware
+
+[amdgpu/navi14_mec2.bin_base]
+desc: "Navi 14" MEC2 firmware
+
+[amdgpu/navi14_mec2_wks.bin_base]
+desc: "Navi 14 wks" MEC2 firmware
+
+[amdgpu/navi14_mec_wks.bin_base]
+desc: "Navi 14 wks" MEC firmware
+
+[amdgpu/navi14_pfp.bin_base]
+desc: "Navi 14" PFP firmware
+
+[amdgpu/navi14_pfp_wks.bin_base]
+desc: "Navi 14 wks" PFP firmware
+
+[amdgpu/navi14_rlc.bin_base]
+desc: "Navi 14" RLC firmware
+
+[amdgpu/navi14_sdma.bin_base]
+desc: "Navi 14" SDMA firmware
+
+[amdgpu/navi14_sdma1.bin_base]
+desc: "Navi 14" SDMA1 firmware
+
+[amdgpu/navi14_smc.bin_base]
+desc: "Navi 14" SMC firmware
+
+[amdgpu/navi14_sos.bin_base]
+desc: "Navi 14" SOS firmware
+
+[amdgpu/navi14_ta.bin_base]
+desc: "Navi 14" TA firmware
+
+[amdgpu/navi14_vcn.bin_base]
+desc: "Navi 14" VCN firmware
+
 [amdgpu/oland_ce.bin_base]
 desc: Radeon HD 8500/8600/8700 series CE microcode
 
@@ -841,6 +989,9 @@ desc: "Picasso" RLC AM4 firmware
 
 [amdgpu/picasso_sdma.bin_base]
 desc: "Picasso" SDMA firmware
+
+[amdgpu/picasso_ta.bin_base]
+desc: "Picasso" TA firmware
 
 [amdgpu/picasso_vcn.bin_base]
 desc: "Picasso" VCN firmware
@@ -1082,6 +1233,9 @@ desc: "Raven 2" RLC firmware
 [amdgpu/raven2_sdma.bin_base]
 desc: "Raven 2" SDMA firmware
 
+[amdgpu/raven2_ta.bin_base]
+desc: "Raven 2" TA firmware
+
 [amdgpu/raven2_vcn.bin_base]
 desc: "Raven 2" VCN firmware
 
@@ -1096,6 +1250,9 @@ desc: "Raven" DMCU firmware
 
 [amdgpu/raven_gpu_info.bin_base]
 desc: "Raven" GPU info
+
+[amdgpu/raven_kicker_rlc.bin_base]
+desc: "Raven refresh" RLC firmware
 
 [amdgpu/raven_me.bin_base]
 desc: "Raven" ME firmware
@@ -1115,8 +1272,44 @@ desc: "Raven" RLC firmware
 [amdgpu/raven_sdma.bin_base]
 desc: "Raven" SDMA firmware
 
+[amdgpu/raven_ta.bin_base]
+desc: "Raven" TA firmware
+
 [amdgpu/raven_vcn.bin_base]
 desc: "Raven" VCN firmware
+
+[amdgpu/renoir_asd.bin_base]
+desc: "Renoir" ASD firmware
+
+[amdgpu/renoir_ce.bin_base]
+desc: "Renoir" CE firmware
+
+[amdgpu/renoir_dmcub.bin_base]
+desc: "Renoir" DMCUB firmware
+
+[amdgpu/renoir_gpu_info.bin_base]
+desc: "Renoir" GPU info
+
+[amdgpu/renoir_me.bin_base]
+desc: "Renoir" ME firmware
+
+[amdgpu/renoir_mec.bin_base]
+desc: "Renoir" MEC firmware
+
+[amdgpu/renoir_mec2.bin_base]
+desc: "Renoir" MEC2 firmware
+
+[amdgpu/renoir_pfp.bin_base]
+desc: "Renoir" PFP firmware
+
+[amdgpu/renoir_rlc.bin_base]
+desc: "Renoir" RLC firmware
+
+[amdgpu/renoir_sdma.bin_base]
+desc: "Renoir" SDMA firmware
+
+[amdgpu/renoir_vcn.bin_base]
+desc: "Renoir" VCN firmware
 
 [amdgpu/si58_mc.bin_base]
 desc: Radeon "SI58" MC microcode
@@ -1366,6 +1559,9 @@ desc: "Vega 20" UVD firmware
 
 [amdgpu/vega20_vce.bin_base]
 desc: "Vega 20" VCE firmware
+
+[amdgpu/vega20_ta.bin_base]
+desc: "Vega 20" TA firmware
 
 [amdgpu/vegam_ce.bin_base]
 desc: "Vega M" CE firmware

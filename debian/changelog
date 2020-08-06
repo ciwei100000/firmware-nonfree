@@ -1,3 +1,168 @@
+firmware-nonfree (20200619-1~bpo10+1) buster-backports; urgency=medium
+
+  * Rebuild for buster-backports:
+    - Use linux-support-4.19.0-6
+
+ -- Ben Hutchings <ben@decadent.org.uk>  Tue, 10 Sep 2019 01:09:52 +0100
+
+firmware-nonfree (20200619-1) unstable; urgency=medium
+
+  [maximilian attems]
+  * New upstream version:
+    - linux-firmware: add rebb firmware for mt7663
+    - QCA: Add Bluetooth firmware for QCA9377
+    - linux-firmware: add firmware for MT7915E
+    - rtw88: update firmware information and README
+    - iwlwifi: update 8265 FW
+    - iwlwifi: update FWs to core47-142 release
+    - rtw88: RTL8821C: add firmware file v24.5
+    - iwlwifi: update and add new FWs from core50-70 and core52-81 releases
+    - mrvl: add firmware for Prestera ASIC devices
+    - cxgb4: Update firmware to revision 1.24.17.0
+    - rtw88: RTL8822C: update firmware version to v9.9
+    - linux-firmware: Update firmware file for Intel Bluetooth 9260
+    - linux-firmware: Update firmware file for Intel Bluetooth 9560
+    - linux-firmware: Update firmware file for Intel Bluetooth AX201
+    - linux-firmware: Update firmware file for Intel Bluetooth AX200
+    - rtl_nic: add firmware for RTL8125B
+    - amdgpu: update navi14 firmware from 20.20 release
+    - amdgpu: update navi10 firmware from 20.20 release
+    - amdgpu: update vega10 firmware from 20.20 release
+    - amdgpu: update vega12 firmware from 20.20 release
+    - amdgpu: update vega20 firmware from 20.20 release
+    - amdgpu: add vega20 TA firmware from 20.20 release
+    - amdgpu: update raven firmware from 20.20 release
+    - amdgpu: update raven2 firmware from 20.20 release
+    - amdgpu: update picasso firmware from 20.20 release
+    - amdgpu: update renoir firmware from 20.20 release
+   * add rtl8168fp-3 for Realtek's RTL8168fp/RTL8117. (closes: #956224)
+   * add firmware-qcom-soc breaks and replaces against old firmware-qcom-media.
+     (closes: #966025)
+
+  [ Lucas Nussbaum ]
+  * README.source: fix option name
+  * qlogic: Add new firmware versions for the QLogic QL45000 series.
+    Closes: #963558
+
+  [ Hideki Yamane ]
+  * add Realtek RTL8125 firmware. (closes: #947356)
+
+  [ Aníbal Limón ]
+  * qcom-soc: Add SDM845 Adreno 630/WLAN DSP SDM845 firmware
+  * qcom-soc: Add missing _base to fw files for pkg desc
+
+ -- maximilian attems <maks@debian.org>  Fri, 24 Jul 2020 17:13:23 +0200
+
+firmware-nonfree (20200421-1) unstable; urgency=medium
+
+  * New upstream version:
+    - iwlwifi: update FWs for 3168, 7265D, 9000, 9260, 8000, 8265 and cc
+    - iwlwifi: update -48 FWs for Qu and cc
+    - netronome: nfp: update Agilio SmartNIC flower firmware to rev
+      AOTC-2.10.A.38
+    - atheros: ath10k: QCA4019 hw1.0: update board-2.bin
+    - atheros: ath10k: QCA6174 hw3.0: update firmware-6.bin to
+      WLAN.RM.4.4.1-00140-QCARMSWPZ-1
+    - atheros: ath10k: QCA9888 hw2.0: update board-2.bin
+    - atheros: ath10k: QCA9984 hw1.0: update board-2.bin
+    - realtek: rtw88: RTL8822C: update rtw8822c_fw.bin to v7.3
+    - realtek: rtl_bt: Update RTL8822C BT FW to V0x098A_94A4
+    - iwlwifi: update FWs to core45-152 release
+    - realtek: rtl_bt: Update RTL8723D BT FW to 0x828A_96F1
+    - amd-graphics: amdgpu: update raven2 ucode for 19.30
+    - amd-graphics: amdgpu: update vega10 ucode for 19.30
+    - amd-graphics: amdgpu: update vega12 ucode for 19.30
+    - copy-firmware: Create symlinks from WHENCE file
+    - Remove duplicate symlinks
+    - misc-nonfree: nvidia: Update Tegra210 XUSB firmware to v50.24
+    - atheros: ath10k: QCA6174 hw3.0: update board-2.bin
+    - atheros: ath10k: QCA9887 hw1.0: update firmware-5.bin to 10.2.4-1.0-00047
+    - atheros: ath10k: QCA9888 hw2.0: update firmware-5.bin to
+      10.4-3.9.0.2-00070
+    - atheros: ath10k: QCA988X hw2.0: update firmware-5.bin to 10.2.4-1.0-00047
+    - atheros: ath10k: QCA9984 hw1.0: update firmware-5.bin to
+      10.4-3.9.0.2-00070
+    - amd-graphics: amdgpu: update raven microcode for 19.50
+    - amd-graphics: amdgpu: update picasso microcode for 19.50
+    - atheros: qca: update bluetooth firmware for QCA6174
+    - netronome: nfp: update Agilio SmartNIC flower firmware to rev
+      AOTC-2.12.A.13
+    - amd-graphics amdgpu: update raven2 firmware for 19.50
+    - realtek: rtl_bt: Update RTL8822C BT FW to V0x0998_C2B4
+    - realtek: rtl_nic: update firmware for RTL8153A
+    - amd-graphics: drm/amdgpu: update to latest 19.50 firmware for raven
+    - atheros: qca: Fix blueooth firmware name for QCA6174
+    - amd-graphics: amdgpu: update vega10 firmware from 19.50
+    - amd-graphics: amdgpu: update vega12 firmware from 19.50
+    - amd-graphics: amdgpu: update vega20 firmware from 19.50
+    - iwlwifi: Update firmware file for Intel Bluetooth 9260
+    - iwlwifi: Update firmware file for Intel Bluetooth 9560
+    - iwlwifi: Update firmware file for Intel Bluetooth AX201
+    - iwlwifi: Update firmware file for Intel Bluetooth AX200
+    - misc-nonfree: cxgb4: Update firmware to revision 1.24.14.0
+    - amd-graphics: amdgpu: update picasso firmware for 20.10
+    - amd-graphics: amdgpu: update raven firmware for 20.10
+    - amd-graphics: amdgpu: update raven2 firmware for 20.10
+    - amd-graphics: amdgpu: update vega10 firmware for 20.10
+    - amd-graphics: amdgpu: update vega12 firmware for 20.10
+    - amd-graphics: amdgpu: update vega20 firmware for 20.10
+    - realtek: rtl_bt: Update RTL8822C BT FW to 0x0999_3AA1
+
+  [ Aníbal Limón ]
+  * misc-nonfree: Update cxgb4 firmware versions in misc-nonfree
+  * Update to linux-support 4.19.0-6
+  * atheros: ath10k: add WCN3990 firmware
+  * Add qcom-sdm845 firmware package
+  * qcom-media; Add Adreno 630 firmware
+
+  [ Salvatore Bonaccorso ]
+  * realtek: Add firmware for Realtek 8822BE/8822CE devices.
+    Thanks to Sjoerd Simons (Closes: #935969)
+
+  [ Hideki Yamane ]
+  * misc-nonfree: Add missing firmware file to i915 (Closes: #931930)
+
+  [ Ben Hutchings ]
+  * debian/rules: Implement build-arch and build-indep targets
+  * debian/rules: Run gencontrol.py when source name or version changes
+  * debian/rules: Run gencontrol.py when any template is changed
+  * Drop firmware-{adi,ralink} transitional packages
+  * debian/config/iwlwifi: Delete unused ABI 14 firmware
+  * Update to linux-support 5.6.0-1:
+    - gencontrol.py: Update Templates._get override to return file mode
+  * debian/rules, debian/bin/gencontrol.py: Run copy-firmware.sh to create
+    symlinks
+  * Rename firmware-qcom-sdm845 to firmware-qcom-soc
+  * Merge firmware-qcom-media into firmware-qcom-soc, leaving a transitional
+    package
+  * copyright: Fix invalid license names
+  * misc-nonfree: Add Broadcom/Cypress Bluetooth firmware for HTC Vive
+  * libertas: Add NXP 88W8977-SDIO and 88W8997-SDIO firmware
+  * bnx2x: Include Broadcom NetXtreme II 10Gb 57710, 57711 and 57712 firmware
+    version 7.13.15.0 (for Linux 5.5 onward)
+  * amd-graphics: Add "Navi 10", "Navi 14", and "Renoir" firmware
+  * amd-graphics: Add "Picasso", "Raven", and "Raven 2" TA firmware
+  * amd-graphics: Add "Raven refresh" RLC firmware
+  * misc-nonfree: Add new versions of Intel "Broxton", "Geminilake",
+    "Icelake", "Kabylake", and "Skylake" HuC firmware
+  * misc-nonfree: Add Intel "Icelake" DMC firmware version 1.09
+  * misc-nonfree: Add Intel "Comet Lake", "Elkhart Lake", and "Tiger Lake"
+    graphics firmware
+  * misc-nonfree: Add Nvidia Tegra 186 and 194 XHCI firmware
+  * misc-nonfree: Add Nvidia TU102/TU104/TU106 and TU116/TU117 signed firmware
+  * netronome: Add Agilio CX and LX firmware supporting BPF or SR-IOV
+  * netxen: Include firmware description and version in package description
+
+  [ maximilian attems ]
+  * Update to linux-support 5.7.0-1.
+  * README.source: add git link to upstream repo and run instructions.
+
+  [ Andres Salomon ]
+  * brcm80211: include the various NVRAM config files needed by Raspberry Pi
+    boards (closes: #964028).
+
+ -- maximilian attems <maks@debian.org>  Wed, 15 Jul 2020 10:41:40 +0200
+
 firmware-nonfree (20190717-2~bpo10+1) buster-backports; urgency=medium
 
   * Rebuild for buster-backports:

@@ -18,18 +18,10 @@ Description: Binary firmware for various drivers in the Linux kernel (meta-packa
  This package depends on non-free firmware which may be used with drivers
  in the Linux kernel.
 
-Package: firmware-adi
+Package: firmware-qcom-media
 Section: non-free/oldlibs
 Architecture: all
-Depends: firmware-misc-nonfree, ${misc:Depends}
-Description: Binary firmware for Analog Devices Inc. DSL modem chips (dummmy package)
- This is a dummy transitional package.  It can be safely removed.
-Multi-Arch: foreign
-
-Package: firmware-ralink
-Section: non-free/oldlibs
-Architecture: all
-Depends: firmware-misc-nonfree, ${misc:Depends}
-Description: Binary firmware for Ralink wireless cards (dummmy package)
+Depends: firmware-qcom-soc, ${misc:Depends}
+Description: Binary firmware for Qualcomm graphics/video (dummy package)
  This is a dummy transitional package.  It can be safely removed.
 Multi-Arch: foreign

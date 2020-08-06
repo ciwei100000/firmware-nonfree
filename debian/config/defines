@@ -16,7 +16,7 @@ packages:
  myricom
  netronome
  netxen
- qcom-media
+ qcom-soc
  qlogic
  realtek
  samsung
@@ -77,6 +77,8 @@ exclude:
 # These are said to be related to the hci_uart driver, but it doesn't
 # request them
  ar3k/*/*
+# wilc1000 driver is "usually found in IoT devices"
+ atmel/wilc1000_*.bin
 # ath6k doesn't actually support this hardware
  ath6k/AR6002/*
 # These filenames are wrong!
@@ -95,6 +97,7 @@ exclude:
  bnx2x/bnx2x-e*-7.2.*.fw
  bnx2x/bnx2x-e*-7.8.2.0.fw
  bnx2x/bnx2x-e*-7.8.17.0.fw
+ bnx2x/bnx2x-e*-7.13.11.0.fw
 # No Debian release references these versions
  cxgb3/t3fw-7.[01].0.bin
  cxgb4/t4fw-1.14.4.0.bin
@@ -108,6 +111,8 @@ exclude:
  cbfw-3.2.1.1.bin
  ct2fw-3.2.1.1.bin
  ctfw-3.2.1.1.bin
+# Nothing seems to reference these
+ dpaa2/mc/*
 # No Debian release references this version
  i915/cnl_dmc_ver1_06.bin
 # Nothing seems to reference these versions
