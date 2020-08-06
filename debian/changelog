@@ -1,9 +1,10 @@
 firmware-nonfree (20200619-1~bpo10+1) buster-backports; urgency=medium
 
   * Rebuild for buster-backports:
-    - Use linux-support-4.19.0-6
+    - Use linux-support-5.7.0-0.bpo.2
+    - Build-depend on python-3
 
- -- Ben Hutchings <ben@decadent.org.uk>  Tue, 10 Sep 2019 01:09:52 +0100
+ -- Lucas Nussbaum <lucas@debian.org>  Thu, 06 Aug 2020 17:00:35 +0200
 
 firmware-nonfree (20200619-1) unstable; urgency=medium
 
