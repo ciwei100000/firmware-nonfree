@@ -1,3 +1,26 @@
+firmware-nonfree (20200721-1) unstable; urgency=medium
+
+  * New upstream version:
+    - QCA: Update WCN3991 FW files
+    - amdgpu: add UVD firmware for SI asics
+    - QCA: Update Bluetooth firmware for QCA6390
+    - linux-firmware: Update firmware file for Intel Bluetooth 9260
+    - linux-firmware: Update firmware file for Intel Bluetooth 9560
+    - linux-firmware: Update firmware file for Intel Bluetooth AX200
+    - linux-firmware: Update firmware file for Intel Bluetooth AX201
+    - QCA: Add correct bin file for WCN3991
+    - Update binary firmware for MT7663 based devices to include firmware offload feature and low power feature.
+    - rtl_nic: update firmware for RTL8125B
+    - Update to 20200629111339 version to aligh SDK. Mainly fix DFS false alarm.
+  * add RTL8822C WoW firmware (closes: #968272)
+  * add RTL8152/RTL8153 firmware (closes: #962972)
+
+  [ Jeremy Stanley ]
+  * brcm80211: include the NVRAM config file needed by GPD Pocket
+    and Win UMPCs
+
+ -- maximilian attems <maks@debian.org>  Mon, 24 Aug 2020 14:55:53 +0200
+
 firmware-nonfree (20200619-1~bpo10+1) buster-backports; urgency=medium
 
   * Rebuild for buster-backports:
