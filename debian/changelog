@@ -1,3 +1,30 @@
+firmware-nonfree (20200817-1) unstable; urgency=medium
+
+  [maximilian attems]
+  * New upstream version:
+    - linux-firmware: update NXP SDSD-8997 firmware image
+    - amdgpu: update navi10 firmware for 20.30
+    - amdgpu: update navi14 firmware for 20.30
+    - amdgpu: update picasso firmware for 20.30
+    - amdgpu: update raven firmware for 20.30
+    - amdgpu: update raven2 firmware for 20.30
+    - amdgpu: update renoir firmware for 20.30
+    - amdgpu: update vega10 firmware for 20.30
+    - amdgpu: update vega12 firmware for 20.30
+    - amdgpu: update vega20 firmware for 20.30
+    - i915: Add HuC firwmare v7.5.0 for TGL
+    - i915: Add DMC firmware 2.08 for TGL
+    - i915: Add DMC firmware 2.02 for RKL
+    - rtl_bt: Update RTL8822C BT UART firmware to 0x0599_8A4F
+    - brcm: Add brcmfmac43455-sdio.raspberrypi,3-model-a-plus.txt symlink
+  * add rtw88 RTL8821C firmware (closes: #969000)
+  * Update to linux-support 5.7.0-3.
+
+  [ Aníbal Limón ]
+  * qcom-soc: Add venus 5.2/5.4 firmware
+
+ -- maximilian attems <maks@debian.org>  Thu, 03 Sep 2020 10:52:04 +0200
+
 firmware-nonfree (20200721-1~bpo10+1) buster-backports; urgency=medium
 
   * Team upload.
