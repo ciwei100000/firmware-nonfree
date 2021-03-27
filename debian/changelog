@@ -1,3 +1,171 @@
+firmware-nonfree (20210208-4) unstable; urgency=medium
+
+  * List MediaTek mt8183 firmware.
+  * Update to linux-support 5.10.0-4.
+  * Add upstream fix for Raspberry Pi 4B. (closes: #984489)
+  * Support BananaPi M2 ultra and BananaPi M3. (closes: #982579)
+    Thanks to Ben Hutchings <ben@decadent.org.uk>,
+              Bernhard <bewoern1@gmail.com>
+
+ -- maximilian attems <maks@debian.org>  Sat, 13 Mar 2021 13:23:22 +0100
+
+firmware-nonfree (20210208-3) unstable; urgency=medium
+
+  * misc-nonfree: Add missing config files for cxgb4 (closes: #983561)
+  * Add missing intel firmwares in iwlwifi, intel-sound, misc-nonfree.
+  * Ship all Qualcomm Atheros Bluetooth firmwares.
+  * Complete all MediaTek firmwares.
+    Thanks to Cyril Brulebois <kibi@debian.org>.
+
+ -- maximilian attems <maks@debian.org>  Fri, 26 Feb 2021 14:31:24 +0100
+
+firmware-nonfree (20210208-2) unstable; urgency=medium
+
+  * Add missing brcmfmac43430-sdio.AP6212.txt config. (#982579)
+  * brcm80211, msc: add various missing symlinks (closes: #982757)
+
+ -- maximilian attems <maks@debian.org>  Wed, 24 Feb 2021 13:07:14 +0100
+
+firmware-nonfree (20210208-1) unstable; urgency=medium
+
+  * New upstream version:
+    - rtl_bt: Update RTL8821C BT(USB I/F) FW to 0x829a_7644
+    - rtl_bt: Add firmware and config files for RTL8852A BT USB chip
+    - rtl_bt: Update RTL8822C BT(USB I/F) FW to 0x099a_7253
+    - rtl_bt: Update RTL8822C BT(UART I/F) FW to 0x059A_25CB
+    - brcm: remove old brcm firmwares that have newer cypress variants
+    - cypress: Link the new cypress firmware to the old brcm files
+    - cypress: Fix link direction
+    - brcm: Update Raspberry Pi 3B+/4B NVRAM for downstream changes
+    - brcm: Add NVRAM for Vamrs 96boards Rock960
+    - brcm: Link RPi4's WiFi firmware with DMI machine name.
+    - qcom: add firmware files for Adreno a650
+    - qcom: Add SM8250 Audio DSP firmware
+    - qcom: Add SM8250 Compute DSP firmware
+    - qcom: Add venus firmware files for VPU-1.0
+    - i915: Add GuC v49.0.1 for DG1
+    - i915: Add HuC v7.7.1 for DG1
+    - i915: Add DMC v2.01 for ADL-S
+    - linux-firmware: Update firmware file for Intel Bluetooth AX201
+    - linux-firmware: Update firmware file for Intel Bluetooth AX200
+    - linux-firmware: Update firmware file for Intel Bluetooth AX210
+    - rtw88: RTL8821C: Update firmware to v24.8
+    - linux-firmware: add firmware for MT7921
+  * add rtl_bt/rtl8852au firmware and config.
+  * add rtl_bt/rtl8723bs firmware and config.
+  * Update to linux-support 5.10.0-3.
+
+ -- maximilian attems <maks@debian.org>  Tue, 09 Feb 2021 11:15:52 +0100
+
+firmware-nonfree (20201218-3) unstable; urgency=medium
+
+  * Add Realtek rtl8822cu config (closes: #971791)
+  * Add Realtek RTL8812 firmwares (closes: #877667)
+  * Add Realtek rtl8822cs config
+
+ -- maximilian attems <maks@debian.org>  Mon, 25 Jan 2021 08:49:45 +0100
+
+firmware-nonfree (20201218-2) unstable; urgency=medium
+
+  * Add RTW8723D firmware (closes: #980101)
+
+ -- maximilian attems <maks@debian.org>  Tue, 19 Jan 2021 15:52:36 +0100
+
+firmware-nonfree (20201218-1) unstable; urgency=medium
+
+  * New upstream version:
+    - amdgpu: update raven firmware for 20.45
+    - amdgpu: update raven2 firmware for 20.45
+    - amdgpu: update navi10 firmware for 20.45
+    - amdgpu: update navi12 firmware for 20.45
+    - amdgpu: update navi14 firmware for 20.45
+    - amdgpu: update renoir firmware for 20.45
+    - amdgpu: update vega10 firmware for 20.45
+    - amdgpu: update vega12 firmware for 20.45
+    - amdgpu: update vega20 firmware for 20.45
+    - amdgpu: add sienna cichlid firmware for 20.45
+    - i915: Remove duplicate KBL DMC entry
+    - i915: Add GuC firmware v49.0.1 for all platforms
+    - linux-firmware: Update firmware file for Intel Bluetooth AX210
+    - linux-firmware: Update firmware file for Intel Bluetooth AX210
+    - QCA : Updated firmware files for WCN3991
+    - mediatek: update MT8173 VPU firmware to v1.1.6
+    - linux-firmware: add firmware for Lontium LT9611UXC DSI to HDMI bridge
+    - linux-firmware: Update firmware file for Intel Bluetooth 9260
+    - linux-firmware: Update firmware file for Intel Bluetooth 9560
+    - linux-firmware: Update firmware file for Intel Bluetooth AX201
+    - linux-firmware: Update firmware file for Intel Bluetooth AX200
+    - linux-firmware: Update firmware file for Intel Bluetooth AX210
+    - make AP6212 in bananpi m2 plus/zero work
+  * Update to linux-support 5.10.0-1.
+
+ -- maximilian attems <maks@debian.org>  Thu, 14 Jan 2021 10:33:27 +0100
+
+firmware-nonfree (20201118-1) unstable; urgency=medium
+
+  * New upstream version:
+    - ath10k: QCA6174 hw3.0: update firmware-6.bin to WLAN.RM.4.4.1-00157-QCARMSWPZ-1
+    - ath10k: QCA6174 hw3.0: update board-2.bin
+    - ath10k: QCA9888 hw2.0: update firmware-5.bin to 10.4-3.9.0.2-00131
+    - ath10k: QCA9984 hw1.0: update firmware-5.bin to 10.4-3.9.0.2-00131
+    - ath10k: QCA6174 hw3.0: add firmware-sdio-6.bin version WLAN.RMH.4.4.1-00077
+    - ath11k: IPQ6018 hw1.0: add board-2.bin
+    - ath11k: IPQ6018 hw1.0: add to WLAN.HK.2.1.0.1-01238-QCAHKSWPL_SILICONZ-2
+    - ath11k: IPQ8074 hw2.0: add board-2.bin
+    - ath11k: IPQ8074 hw2.0: add to WLAN.HK.2.1.0.1-01238-QCAHKSWPL_SILICONZ-2
+    - ath11k: QCA6390 hw2.0: add board-2.bin
+    - ath11k: QCA6390 hw2.0: add to WLAN.HST.1.0.1-01740-QCAHSTSWPLZ_V2_TO_X86-1
+      (closes: #977042)
+    - QCA : Fixed BT SSR due to command timeout / IO fatal error
+    - qcom : updated venus firmware files for v5.4
+    - QCA: Update Bluetooth firmware for QCA6390
+    - rtl_bt: Update RTL8822C BT(USB I/F) FW to 0x099A_281A
+    - rtw88: RTL8822C: Update firmware to v9.9.4
+    - amdgpu: update raven VCN firmware
+    - amdgpu: update raven2 VCN firmware
+    - amdgpu: update picasso VCN firmware
+    - vpdma: Move firmware to ti directory
+    - Revert "rtw88: RTL8822C: Update firmware to v9.9.4"
+    - rtw88: RTL8822C: Update firmware to v9.9.4
+    - rtlwifi: v88.2 firmware files for RTL8192CU
+
+ -- maximilian attems <maks@debian.org>  Fri, 08 Jan 2021 10:05:27 +0100
+
+firmware-nonfree (20201022-1) unstable; urgency=medium
+
+  * New upstream version:
+    - linux-firmware: Update Marvell Switchdev firmware with ABI changes
+    - linux-firmware: move i915 firmware symlinks to WHENCE
+    - linux-firmware: Update firmware patch for Intel Bluetooth 7265 (D1)
+    - QCA : Updated firmware files for WCN3991
+    - linux-firmware: Add new VPDMA firmware 1b8.bin
+    - amdgpu: update navi10 firmware for 20.40
+    - amdgpu: update navi12 firmware for 20.40
+    - amdgpu: update navi14 firmware for 20.40
+    - amdgpu: update picasso firmware for 20.40
+    - amdgpu: update raven firmware for 20.40
+    - amdgpu: update raven2 firmware for 20.40
+    - amdgpu: update renoir firmware for 20.40
+    - amdgpu: update vega10 firmware for 20.40
+    - amdgpu: update vega12 firmware for 20.40
+    - amdgpu: update vega20 firmware for 20.40
+    - copy-firmware: Always write Link: entries
+    - ice: Add comms package file for Intel E800 series driver
+    - qcom : updated venus firmware files for v5.4
+    - i915: Add DG1 DMC v2.02
+    - iwlwifi: update 3168, 7265D, 8000C and 8265 firmwares
+    - iwlwifi: update and add new FWs from core56-54 release
+    - QCA : Updated firmware file for WCN3991
+    - mediatek: separate venc service thread
+    - ice: update package file to 1.3.16.0
+    - ath10k: add SDIO firmware for QCA9377 WiFi
+    - rtl_bt: Update RTL8821C BT FW to 0xAA6C_A99E
+    - cypress: add Cypress firmware and clm_blob files
+  * Update to linux-support 5.9.0-5.
+  * iwlwifi: add Intel Bluetooth AX201 (var 32 rev 0) (closes: 975726)
+
+ -- maximilian attems <maks@debian.org>  Mon, 04 Jan 2021 11:21:55 +0100
+
 firmware-nonfree (20200918-1~bpo10+1) buster-backports; urgency=medium
 
   * Team upload.
@@ -1432,7 +1600,7 @@ firmware-nonfree (0.22) unstable; urgency=low
   [ maximilian attems ]
   * Add iwlwifi-1000-3.ucode.
   * Add iwlwifi-6000-4.ucode.
-  
+
   [ Ben Hutchings ]
   * Update Radeon firmware for use with Linux 2.6.32 (Closes: #558023)
   * Change URI for firmware-linux-nonfree to refer to David Woodhouse's
@@ -1493,7 +1661,7 @@ firmware-nonfree (0.18) unstable; urgency=low
   * Add iwlwifi-5000-2.ucode. (closes: #532207)
   * Add iwlwifi-5150-2.ucode.
   * Update iwlwifi-4945 to 228.61.2.24.
-  
+
   [ Ben Hutchings ]
   * Fix Matrox G200/G400/G550 firmware image format (closes: #531367)
   * Add Broadcom Tigon3 firmware for use with tg3 driver (closes: 543233)

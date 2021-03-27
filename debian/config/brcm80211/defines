@@ -3,6 +3,8 @@ desc: Broadcom/Cypress 802.11 wireless cards
 files:
  brcm/bcm43xx-0.fw
  brcm/bcm43xx_hdr-0.fw
+ brcm/brcmfmac43012-sdio.clm_blob
+ brcm/brcmfmac43012-sdio.bin
  brcm/brcmfmac43143.bin
  brcm/brcmfmac43143-sdio.bin
  brcm/brcmfmac43236b.bin
@@ -13,31 +15,70 @@ files:
  brcm/brcmfmac4329-sdio.bin
  brcm/brcmfmac4330-sdio.bin
  brcm/brcmfmac4334-sdio.bin
- brcm/brcmfmac43340-sdio.bin
  brcm/brcmfmac4335-sdio.bin
+ brcm/brcmfmac43340-sdio.bin
  brcm/brcmfmac43362-sdio.bin
+ brcm/brcmfmac43362-sdio.lemaker,bananapro.txt
+ brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-plus.txt
+ brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-zero.txt
+ brcm/brcmfmac43430-sdio.sinovoip,bpi-m2-ultra.txt
+ brcm/brcmfmac43430-sdio.sinovoip,bpi-m3.txt
  brcm/brcmfmac4339-sdio.bin
+ brcm/brcmfmac43430-sdio.bin
+ brcm/brcmfmac43430-sdio.clm_blob
+ brcm/brcmfmac43430a0-sdio.bin
+ brcm/brcmfmac43430-sdio.AP6212.txt
+ brcm/brcmfmac43430-sdio.raspberrypi,3-model-b.txt
  brcm/brcmfmac43455-sdio.bin
+ brcm/brcmfmac43455-sdio.clm_blob
+ brcm/brcmfmac43455-sdio.raspberrypi,3-model-a-plus.txt
  brcm/brcmfmac43455-sdio.raspberrypi,3-model-b-plus.txt
  brcm/brcmfmac43455-sdio.raspberrypi,4-model-b.txt
- brcm/brcmfmac43430a0-sdio.bin
- brcm/brcmfmac43430-sdio.bin
- brcm/brcmfmac43430-sdio.raspberrypi,3-model-b.txt
- brcm/brcmfmac4350-pcie.bin
  brcm/brcmfmac4350c2-pcie.bin
+ brcm/brcmfmac4350-pcie.bin
  brcm/brcmfmac4354-sdio.bin
+ brcm/brcmfmac4354-sdio.clm_blob
+ brcm/brcmfmac43569.bin
  brcm/brcmfmac4356-pcie.bin
  brcm/brcmfmac4356-pcie.gpd-win-pocket.txt
  brcm/brcmfmac4356-sdio.bin
- brcm/brcmfmac43569.bin
- brcm/brcmfmac43570-pcie.bin
+ brcm/brcmfmac4356-pcie.clm_blob
+ brcm/brcmfmac4356-sdio.bin
+ brcm/brcmfmac4356-sdio.clm_blob
+ brcm/brcmfmac4356-sdio.vamrs,rock960.txt
  brcm/brcmfmac4358-pcie.bin
  brcm/brcmfmac43602-pcie.ap.bin
  brcm/brcmfmac43602-pcie.bin
  brcm/brcmfmac4366b-pcie.bin
+ brcm/brcmfmac43570-pcie.bin
+ brcm/brcmfmac43570-pcie.clm_blob
  brcm/brcmfmac4371-pcie.bin
  brcm/brcmfmac4373.bin
  brcm/brcmfmac4373-sdio.bin
+ brcm/brcmfmac4373-sdio.clm_blob
+ brcm/brcmfmac54591-pcie.bin
+ brcm/brcmfmac54591-pcie.clm_blob
+ cypress/cyfmac43012-sdio.bin
+ cypress/cyfmac43012-sdio.clm_blob
+ cypress/cyfmac43340-sdio.bin
+ cypress/cyfmac43362-sdio.bin
+ cypress/cyfmac4339-sdio.bin
+ cypress/cyfmac43430-sdio.bin
+ cypress/cyfmac43430-sdio.clm_blob
+ cypress/cyfmac43455-sdio.bin
+ cypress/cyfmac43455-sdio.clm_blob
+ cypress/cyfmac4354-sdio.bin
+ cypress/cyfmac4354-sdio.clm_blob
+ cypress/cyfmac4356-pcie.bin
+ cypress/cyfmac4356-pcie.clm_blob
+ cypress/cyfmac4356-sdio.bin
+ cypress/cyfmac4356-sdio.clm_blob
+ cypress/cyfmac43570-pcie.bin
+ cypress/cyfmac43570-pcie.clm_blob
+ cypress/cyfmac4373-sdio.bin
+ cypress/cyfmac4373-sdio.clm_blob
+ cypress/cyfmac54591-pcie.bin
+ cypress/cyfmac54591-pcie.clm_blob
 longdesc: wireless network cards supported by the brcmsmac or brcmfmac driver
 
 [brcm/bcm43xx-0.fw_base]
@@ -78,18 +119,6 @@ desc: Broadcom BCM4330 firmware
 [brcm/brcmfmac4334-sdio.bin_base]
 desc: Broadcom BCM4334 firmware
 
-[brcm/brcmfmac43340-sdio.bin_base]
-desc: Broadcom BCM43340 firmware
-
-[brcm/brcmfmac43362-sdio.bin_base]
-desc: Broadcom BCM43362 firmware
-
-[brcm/brcmfmac4335-sdio.bin_base]
-desc: Broadcom BCM4335 firmware
-
-[brcm/brcmfmac4339-sdio.bin_base]
-desc: Broadcom BCM4339 firmware
-
 [brcm/brcmfmac43455-sdio.raspberrypi,3-model-b-plus.txt_base]
 desc: BCM43455 NVRAM for the Raspberry Pi 3 B+
 
@@ -102,11 +131,11 @@ desc: Broadcom BCM43455 firmware
 [brcm/brcmfmac43430a0-sdio.bin_base]
 desc: Broadcom BCM43430 rev 0 firmware
 
+[brcmfmac43430-sdio.AP6212.txt_base]
+desc: BCM43430 NRVAM AP6212 config
+
 [brcm/brcmfmac43430-sdio.raspberrypi,3-model-b.txt_base]
 desc: BCM43430 NVRAM for the Raspberry Pi 3 B
-
-[brcm/brcmfmac43430-sdio.bin_base]
-desc: Broadcom BCM43430 rev 1+ firmware
 
 [brcm/brcmfmac4350-pcie.bin_base]
 desc: Broadcom BCM4350 rev 0-4 firmware
@@ -114,26 +143,20 @@ desc: Broadcom BCM4350 rev 0-4 firmware
 [brcm/brcmfmac4350c2-pcie.bin_base]
 desc: Broadcom BCM4350 rev 5+ firmware
 
-[brcm/brcmfmac4354-sdio.bin_base]
-desc: Broadcom BCM4354 firmware
-
-[brcm/brcmfmac4356-pcie.bin_base]
-desc: Broadcom BCM4356-PCIe firmware
-
 [brcm/brcmfmac4356-pcie.gpd-win-pocket.txt_base]
 desc: Broadcom BCM4356-PCIe NVRAM for GPD Pocket and Win
 
 [brcm/brcmfmac4356-sdio.bin_base]
-desc: Broadcom BCM4356-SDIO firmware]
+desc: Broadcom BCM4356-SDIO firmware
+
+[brcm/brcmfmac4356-sdio.vamrs,rock960.txt_base]
+desc: Rock960 Cypress 4356 WiFi 
 
 [brcm/brcmfmac4358-pcie.bin_base]
 desc: Broadcom BCM4358 firmware
 
 [brcm/brcmfmac43569.bin_base]
 desc: Broadcom BCM43569 firmware
-
-[brcm/brcmfmac43570-pcie.bin_base]
-desc: Broadcom BCM43570 firmware
 
 [brcm/brcmfmac43602-pcie.ap.bin_base]
 desc: Broadcom BCM43602 AP-mode firmware
@@ -150,5 +173,65 @@ desc: Broadcom BCM4371 firmware
 [brcm/brcmfmac4373.bin_base]
 desc: Cypress CYW4373-USB firmware
 
-[brcm/brcmfmac4373-sdio.bin_base]
+[cypress/cyfmac43012-sdio.bin_base]
+desc: Cypress CYW43012-SDIO firmware
+
+[cypress/cyfmac43012-sdio.clm_blob_base]
+desc: Cypress CYW43012-SDIO CLM firmware
+
+[cypress/cyfmac43340-sdio.bin_base]
+desc: Cypress CYW43340-SDIO firmware
+
+[cypress/cyfmac43362-sdio.bin_base]
+desc: Cypress CYW43362-SDIO firmware
+
+[cypress/cyfmac4339-sdio.bin_base]
+desc: Cypress CYW4339-SDIO firmware
+
+[cypress/cyfmac43430-sdio.bin_base]
+desc: Cypress CYW43430-SDIO firmware
+
+[cypress/cyfmac43430-sdio.clm_blob_base]
+desc: Cypress CYW43430-SDIO CLM firmware
+
+[cypress/cyfmac43455-sdio.bin_base]
+desc: Cypress CYW43455-SDIO firmware
+
+[cypress/cyfmac43455-sdio.clm_blob_base]
+desc: Cypress CYW43455-SDIO CLM firmware
+
+[cypress/cyfmac4354-sdio.bin_base]
+desc: Cypress CYW4354-SDIO firmware
+
+[cypress/cyfmac4354-sdio.clm_blob_base]
+desc: Cypress CYW4354-SDIO CLM firmware
+
+[cypress/cyfmac4356-pcie.bin_base]
+desc: Cypress CYW4356-PCIE firmware
+
+[cypress/cyfmac4356-pcie.clm_blob_base]
+desc: Cypress CYW4356-PCIE CLM firmware
+
+[cypress/cyfmac4356-sdio.bin_base]
+desc: Cypress CYW4356-SDIO firmware
+
+[cypress/cyfmac4356-sdio.clm_blob_base]
+desc: Cypress CYW4356-SDIO CLM firmware
+
+[cypress/cyfmac43570-pcie.bin_base]
+desc: Cypress CYW43570-PCIE firmware
+
+[cypress/cyfmac43570-pcie.clm_blob_base]
+desc: Cypress CYW43570-PCIE CLM firmware
+
+[cypress/cyfmac4373-sdio.bin_base]
 desc: Cypress CYW4373-SDIO firmware
+
+[cypress/cyfmac4373-sdio.clm_blob_base]
+desc: Cypress CYW4373-SDIO CLM firmware
+
+[cypress/cyfmac54591-pcie.bin_base]
+desc: Cypress CYW54591-PCIE firmware
+
+[cypress/cyfmac54591-pcie.clm_blob_base]
+desc: Cypress CYW54591-PCIE CLM firmware
