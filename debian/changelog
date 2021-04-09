@@ -1,3 +1,41 @@
+firmware-nonfree (20210315-2) unstable; urgency=medium
+
+  * Support Cubietech Cubietruck and Jumper EZpad mini 3 tablet
+    (closes: #985740, #844056)
+  * Add firmware-atheros recommends to firmware-qcom-soc (closes: #985743)
+    Thanks to Andreas Beckmann <anbe@debian.org>
+  * Add missing brcmfmac4366c firmware.
+  * Add more missing BCM4334, BCM43340 and BCM43430 NVRAMS.
+
+ -- maximilian attems <maks@debian.org>  Sat, 27 Mar 2021 13:03:31 +0100
+
+firmware-nonfree (20210315-1) unstable; urgency=medium
+
+  * Unstable upload of green sardine support (closes: #984874)
+
+ -- maximilian attems <maks@debian.org>  Sat, 20 Mar 2021 19:14:23 +0100
+
+firmware-nonfree (20210315-1~exp1) experimental; urgency=medium
+
+  * New upstream version:
+    - rtw88: RTL8822C: Update normal firmware to v9.9.5 (closes: #983255)
+    - amdgpu: add initial firmware for green sardine (closes: #984852)
+    - silabs: add new firmware for WF200
+    - brcm: Fix Raspberry Pi 4B NVRAM file
+    - Add symlink for BananaPi M2 to brcmfmac43430-sdio config
+    - WHENCE: add missing symlink for BananaPi M3
+    - rtw89: 8852a: add firmware v0.9.12.2
+    - linux-firmware: add frimware for mediatek bluetooth chip (MT7921)
+    - iwlwifi: update 7265D firmware
+    - iwlwifi: update 9000-family firmwares (closes: #963025)
+    - iwlwifi: add new FWs from core59-66 release
+    - rtw88: 8822c: Update normal firmware to v9.9.6
+    - linux-firmware: Update firmware file for Intel Bluetooth AX201
+    - linux-firmware: Update firmware file for Intel Bluetooth AX200
+    - linux-firmware: Update firmware file for Intel Bluetooth AX210
+
+ -- maximilian attems <maks@debian.org>  Tue, 16 Mar 2021 16:56:56 +0100
+
 firmware-nonfree (20210208-4~bpo10+1) buster-backports; urgency=medium
 
   * Team upload.
