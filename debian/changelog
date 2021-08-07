@@ -1,3 +1,10 @@
+firmware-nonfree (20210315-3~bpo10+1) buster-backports; urgency=medium
+
+  * Team upload.
+  * Rebuild for buster-backports.
+
+ -- Roger Shimizu <rosh@debian.org>  Sat, 07 Aug 2021 20:19:46 +0900
+
 firmware-nonfree (20210315-3) unstable; urgency=medium
 
   * Update to linux-support 5.10.0-8
