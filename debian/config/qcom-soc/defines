@@ -7,6 +7,9 @@ breaks: firmware-qcom-media (<< 20200421-1~)
 files:
  qcom/a300_pfp.fw
  qcom/a300_pm4.fw
+ qcom/a330_pfp.fw
+ qcom/a330_pm4.fw
+ qcom/a420_pfp.fw
  qcom/a530_pfp.fw
  qcom/a530_pm4.fw
  qcom/a530_zap.b00
@@ -21,6 +24,14 @@ files:
  qcom/a650_sqe.fw
  qcom/a660_gmu.bin
  qcom/a660_sqe.fw
+ qcom/apq8096/adsp.mbn
+ qcom/apq8096/adspr.jsn
+ qcom/apq8096/adspua.jsn
+ qcom/apq8096/mba.mbn
+ qcom/apq8096/modem.mbn
+ qcom/apq8096/modemr.jsn
+ qcom/leia_pfp_470.fw
+ qcom/leia_pm4_470.fw
  qcom/sdm845/a630_zap.mbn
  qcom/sdm845/adsp.mbn
  qcom/sdm845/adspr.jsn

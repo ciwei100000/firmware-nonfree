@@ -47,8 +47,9 @@ files:
  ath10k/QCA988X/hw2.0/firmware-5.bin
  ath10k/QCA9984/hw1.0/board-2.bin
  ath10k/QCA9984/hw1.0/firmware-5.bin
- ath10k/QCA99X0/hw2.0/board.bin
+ ath10k/QCA99X0/hw2.0/board-2.bin
  ath10k/QCA99X0/hw2.0/firmware-5.bin
+ ath10k/WCN3990/hw1.0/board-2.bin
  ath10k/WCN3990/hw1.0/firmware-5.bin
  ath10k/WCN3990/hw1.0/wlanmdsp.mbn
  ath11k/IPQ6018/hw1.0/board-2.bin
@@ -86,6 +87,24 @@ files:
  ath11k/QCA6390/hw2.0/board-2.bin
  ath11k/QCA6390/hw2.0/amss.bin
  ath11k/QCA6390/hw2.0/m3.bin
+ ath11k/WCN6750/hw1.0/board-2.bin
+ ath11k/WCN6750/hw1.0/wpss.b00
+ ath11k/WCN6750/hw1.0/wpss.b01
+ ath11k/WCN6750/hw1.0/wpss.b02
+ ath11k/WCN6750/hw1.0/wpss.b03
+ ath11k/WCN6750/hw1.0/wpss.b04
+ ath11k/WCN6750/hw1.0/wpss.b05
+ ath11k/WCN6750/hw1.0/wpss.b06
+ ath11k/WCN6750/hw1.0/wpss.b07
+ ath11k/WCN6750/hw1.0/wpss.b08
+ ath11k/WCN6750/hw1.0/wpss.mdt
+ ath11k/WCN6855/hw2.0/regdb.bin
+ ath11k/WCN6855/hw2.0/board-2.bin
+ ath11k/WCN6855/hw2.0/amss.bin
+ ath11k/WCN6855/hw2.0/m3.bin
+ ath11k/QCN9074/hw1.0/board-2.bin
+ ath11k/QCN9074/hw1.0/amss.bin
+ ath11k/QCN9074/hw1.0/m3.bin
  ath3k-1.fw
  ath6k/AR6003.1/hw2.1.1/athwlan.bin
  ath6k/AR6003.1/hw2.1.1/bdata.SD31.bin
@@ -149,7 +168,16 @@ files:
  qca/nvm_usb_00130200_0105.bin
  qca/nvm_usb_00130200_0106.bin
  qca/nvm_usb_00130200_0107.bin
+ qca/nvm_usb_00130200_0109.bin
  qca/nvm_usb_00130200_0110.bin
+ qca/nvm_usb_00130201.bin
+ qca/nvm_usb_00130201_010a.bin
+ qca/nvm_usb_00130201_010b.bin
+ qca/nvm_usb_00130201_0303.bin
+ qca/nvm_usb_00130201_gf.bin
+ qca/nvm_usb_00130201_gf_010a.bin
+ qca/nvm_usb_00130201_gf_010b.bin
+ qca/nvm_usb_00130201_gf_0303.bin
  qca/rampatch_00130300.bin
  qca/rampatch_00130302.bin
  qca/rampatch_00230302.bin
@@ -159,6 +187,7 @@ files:
  qca/rampatch_usb_00000300.bin
  qca/rampatch_usb_00000302.bin
  qca/rampatch_usb_00130200.bin
+ qca/rampatch_usb_00130201.bin
  wil6210.brd
  wil6210.fw
 longdesc: USB wireless network and Bluetooth cards supported by the ar5523,
