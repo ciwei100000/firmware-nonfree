@@ -18,6 +18,7 @@ files:
  as102_data2_st.hex
  brcm/BCM-0bb4-0306.hcd
  brcm/BCM-0a5c-6410.hcd
+ cadence/mhdp8546.bin
  ctefx.bin
  ctspeq.bin
  cxgb3/ael2005_opt_edc.bin
@@ -31,11 +32,19 @@ files:
  cxgb4/aq1202_fw.cld
  cxgb4/bcm8483.bin
  cxgb4/t4fw.bin
- cxgb4/t4fw-1.24.17.0.bin
+ cxgb4/t4fw-1.26.0.0.bin
+ cxgb4/t4-config.txt
  cxgb4/t5fw.bin
- cxgb4/t5fw-1.24.17.0.bin
+ cxgb4/t5fw-1.26.0.0.bin
+ cxgb4/t5-config.txt
  cxgb4/t6fw.bin
- cxgb4/t6fw-1.24.17.0.bin
+ cxgb4/t6fw-1.26.0.0.bin
+ cxgb4/t6-config.txt
+ cxgb4/configs/t4-config-default.txt
+ cxgb4/configs/t5-config-default.txt
+ cxgb4/configs/t6-config-default.txt
+ cxgb4/configs/t5-config-hashfilter.txt
+ cxgb4/configs/t6-config-hashfilter.txt
  dabusb/bitstream.bin
  dabusb/firmware.fw
  dvb-fe-xc4000-1.4.1.fw
@@ -69,29 +78,48 @@ files:
  hfi1_sbus.fw
  imx/sdma/sdma-imx6q.bin
  imx/sdma/sdma-imx7d.bin
+ i915/adlp_dmc_ver2_09.bin
+ i915/adlp_dmc_ver2_10.bin
+ i915/adlp_guc_62.0.3.bin
+ i915/adls_dmc_ver2_01.bin
  i915/bxt_dmc_ver1.bin
  i915/bxt_dmc_ver1_07.bin
  i915/bxt_guc_32.0.3.bin
  i915/bxt_guc_33.0.0.bin
+ i915/bxt_guc_49.0.1.bin
+ i915/bxt_guc_62.0.0.bin
  i915/bxt_guc_ver8_7.bin
  i915/bxt_guc_ver9_29.bin
  i915/bxt_huc_2.0.0.bin
  i915/bxt_huc_ver01_07_1398.bin
  i915/bxt_huc_ver01_8_2893.bin
  i915/cml_guc_33.0.0.bin
+ i915/cml_guc_49.0.1.bin
+ i915/cml_guc_62.0.0.bin
  i915/cml_huc_4.0.0.bin
  i915/cnl_dmc_ver1_07.bin
+ i915/dg1_dmc_ver2_02.bin
+ i915/dg1_guc_49.0.1.bin
+ i915/dg1_guc_62.0.0.bin
+ i915/dg1_huc_7.7.1.bin
+ i915/dg1_huc_7.9.3.bin
  i915/ehl_guc_33.0.4.bin
+ i915/ehl_guc_49.0.1.bin
+ i915/ehl_guc_62.0.0.bin
  i915/ehl_huc_9.0.0.bin
  i915/glk_dmc_ver1_04.bin
  i915/glk_guc_32.0.3.bin
  i915/glk_guc_33.0.0.bin
+ i915/glk_guc_49.0.1.bin
+ i915/glk_guc_62.0.0.bin
  i915/glk_huc_4.0.0.bin
  i915/glk_huc_ver03_01_2893.bin
  i915/icl_dmc_ver1_07.bin
  i915/icl_dmc_ver1_09.bin
  i915/icl_guc_32.0.3.bin
  i915/icl_guc_33.0.0.bin
+ i915/icl_guc_49.0.1.bin
+ i915/icl_guc_62.0.0.bin
  i915/icl_huc_9.0.0.bin
  i915/icl_huc_ver8_4_3238.bin
  i915/kbl_dmc_ver1.bin
@@ -99,6 +127,8 @@ files:
  i915/kbl_dmc_ver1_04.bin
  i915/kbl_guc_32.0.3.bin
  i915/kbl_guc_33.0.0.bin
+ i915/kbl_guc_49.0.1.bin
+ i915/kbl_guc_62.0.0.bin
  i915/kbl_guc_ver9_14.bin
  i915/kbl_guc_ver9_39.bin
  i915/kbl_huc_4.0.0.bin
@@ -107,8 +137,12 @@ files:
  i915/skl_dmc_ver1_23.bin
  i915/skl_dmc_ver1_26.bin
  i915/skl_dmc_ver1_27.bin
+ i915/rkl_dmc_ver2_02.bin
+ i915/rkl_dmc_ver2_03.bin
  i915/skl_guc_32.0.3.bin
  i915/skl_guc_33.0.0.bin
+ i915/skl_guc_49.0.1.bin
+ i915/skl_guc_62.0.0.bin
  i915/skl_guc_ver1.bin
  i915/skl_guc_ver4.bin
  i915/skl_guc_ver6.bin
@@ -118,27 +152,53 @@ files:
  i915/skl_huc_ver01_07_1398.bin
  i915/tgl_dmc_ver2_04.bin
  i915/tgl_dmc_ver2_06.bin
+ i915/tgl_dmc_ver2_08.bin
+ i915/tgl_dmc_ver2_12.bin
  i915/tgl_guc_35.2.0.bin
+ i915/tgl_guc_49.0.1.bin
+ i915/tgl_guc_62.0.0.bin
  i915/tgl_huc_7.0.12.bin
  i915/tgl_huc_7.0.3.bin
+ i915/tgl_huc_7.5.0.bin
+ i915/tgl_huc_7.9.3.bin
+ intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin
+ intel/ice/ddp-comms/ice_comms-1.3.20.0.pkg
+ intel/ice/ddp/ice-1.3.26.0.pkg
+ intel/ice/ddp/ice.pkg
  kaweth/new_code.bin
  kaweth/new_code_fix.bin
  kaweth/trigger_code.bin
  kaweth/trigger_code_fix.bin
+ lt9611uxc_fw.bin
  matrox/g200_warp.fw
  matrox/g400_warp.fw
+ mediatek/BT_RAM_CODE_MT7961_1_2_hdr.bin
  mediatek/mt7610e.bin
  mediatek/mt7610u.bin
+ mediatek/mt7615_cr4.bin
+ mediatek/mt7615_n9.bin
+ mediatek/mt7615_rom_patch.bin
  mediatek/mt7622pr2h.bin
  mediatek/mt7650e.bin
+ mediatek/mt7622_n9.bin
+ mediatek/mt7622_rom_patch.bin
  mediatek/mt7662u.bin
  mediatek/mt7662u_rom_patch.bin
+ mediatek/mt7663pr2h.bin
  mediatek/mt7663pr2h_rebb.bin
  mediatek/mt7663_n9_rebb.bin
+ mediatek/mt7663_n9_v3.bin
  mediatek/mt7668pr2h.bin
  mediatek/mt7915_wm.bin
  mediatek/mt7915_wa.bin
  mediatek/mt7915_rom_patch.bin
+ mediatek/mt8173/vpu_d.bin
+ mediatek/mt8173/vpu_p.bin
+ mediatek/mt8183/scp.img
+ mediatek/WIFI_MT7922_patch_mcu_1_1_hdr.bin
+ mediatek/WIFI_RAM_CODE_MT7922_1.bin
+ mediatek/WIFI_MT7961_patch_mcu_1_2_hdr.bin
+ mediatek/WIFI_RAM_CODE_MT7961_1.bin
  moxa/moxa-1110.fw
  moxa/moxa-1130.fw
  moxa/moxa-1131.fw
@@ -397,6 +457,7 @@ files:
  nvidia/tegra186/xusb.bin
  nvidia/tegra186/vic04_ucode.bin
  nvidia/tegra194/xusb.bin
+ nvidia/tegra194/vic.bin
  nvidia/tegra210/vic04_ucode.bin
  nvidia/tegra210/xusb.bin
  nvidia/tu102/acr/bl.bin
@@ -533,6 +594,7 @@ files:
  rt73.bin
  s2250.fw
  s2250_loader.fw
+ silabs/wfm_wf200_C0.sec
  tehuti/bdx.bin
  tigon/tg3_tso.bin
  tigon/tg3.bin
@@ -583,6 +645,9 @@ desc: Abilis Systems AS102 stage 2 firmware
 [brcm/BCM-0bb4-0306.hcd_base]
 desc: Broadcom/Cypress Bluetooth firmware (HTC Vive)
 
+[cadence/mhdp8546.bin_base]
+desc: Cadence MHDP8546 DP bridge firmware
+
 [ctefx.bin_base]
 desc: Creative CA0132 DSP firmware
 
@@ -624,17 +689,32 @@ desc: Chelsio T4 10GBASE-T firmware (AQ1202 PHY)
 [cxgb4/bcm8483.bin_base]
 desc: Chelsio T4 10GBASE-T firmware (BCM84834 PHY)
 
-[cxgb4/t4fw-1.24.14.0.bin_base]
+[cxgb4/t4fw-1.26.0.0.bin_base]
 desc: Chelsio T4 firmware
-version: 1.24.14.0
+version: 1.26.0.0
 
-[cxgb4/t5fw-1.24.14.0.bin_base]
+[cxgb4/t5fw-1.26.0.0.bin_base]
 desc: Chelsio T5 firmware
-version: 1.24.14.0
+version: 1.26.0.0
 
-[cxgb4/t6fw-1.24.14.0.bin_base]
+[cxgb4/t6fw-1.26.0.0.bin_base]
 desc: Chelsio T6 firmware
-version: 1.24.14.0
+version: 1.26.0.0
+
+[cxgb4/configs/t4-config-default.txt_base]
+desc: Chelsio T4 config
+
+[cxgb4/configs/t5-config-default.txt_base]
+desc: Chelsio T5 config
+
+[cxgb4/configs/t6-config-default.txt_base]
+desc: Chelsio T6 config
+
+[cxgb4/configs/t5-config-hashfilter.txt_base]
+desc: Chelsio T5 hashfilter config
+
+[cxgb4/configs/t6-config-hashfilter.txt_base]
+desc: Chelsio T6 hashfilter config
 
 [dabusb/firmware.fw_base]
 desc: DAB-USB firmware
@@ -746,6 +826,22 @@ version: 3.5
 desc: Freescale i.MX7 SDMA firmware
 version: 4.5
 
+[i915/adlp_dmc_ver2_09.bin_base]
+desc: Intel ADL-P DMC Support
+version: 2.09
+
+[i915/adlp_dmc_ver2_10.bin_base]
+desc: Intel ADL-P DMC Support
+version: 2.10
+
+[i915/adlp_guc_62.0.3.bin_base]
+desc: Intel ADL-P GuC firmware
+version: 62.0.3
+
+[i915/adls_dmc_ver2_01.bin_base]
+desc: Intel "Adler Lake" DMC firmware
+version: 2.01
+
 [i915/bxt_dmc_ver1_07.bin_base]
 desc: Intel "Broxton" DMC firmware
 version: 1.07
@@ -757,6 +853,14 @@ version: 32.0.3
 [i915/bxt_guc_33.0.0.bin_base]
 desc: Intel "Broxton" GuC firmware
 version: 33.0.0
+
+[i915/bxt_guc_49.0.1.bin_base]
+desc: Intel "Broxton" GuC firmware
+version: 49.0.1
+
+[i915/bxt_guc_62.0.0.bin_base]
+desc: Intel "Broxton" GuC firmware
+version: 62.0.0
 
 [i915/bxt_guc_ver8_7.bin_base]
 desc: Intel "Broxton" GuC firmware
@@ -782,6 +886,14 @@ version: 1.8.2893
 desc: Intel "Comet Lake" GuC firmware
 version: 33.0.0
 
+[i915/cml_guc_49.0.1.bin_base]
+desc: Intel "Comet Lake" GuC firmware
+version: 49.0.1
+
+[i915/cml_guc_62.0.0.bin_base]
+desc: Intel "Comet Lake" GuC firmware
+version: 62.0.0
+
 [i915/cml_huc_4.0.0.bin_base]
 desc: Intel "Comet Lake" HuC firmware
 version: 4.0.0
@@ -790,9 +902,37 @@ version: 4.0.0
 desc: Intel "Cannonlake" DMC firmware
 version: 1.07
 
+[i915/i915/dg1_dmc_ver2_02.bin_base]
+desc: Intel DG1 DMC firmware
+version: 2release2
+
+[i915/dg1_guc_49.0.1.bin_base]
+desc: Intel DG1 GUC firmware
+version: 49.0.1
+
+[i915/dg1_guc_62.0.0.bin_base]
+desc: Intel DG1 GuC firmware
+version: 62.0.0
+
+[i915/dg1_huc_7.7.1.bin_base]
+desc: Intel DG1 HUC firmware
+version: 7.7.1
+
+[i915/dg1_huc_7.9.3.bin_base]
+desc: Intel DG1 HUC firmware
+version: 7.9.3
+
 [i915/ehl_guc_33.0.4.bin_base]
 desc: Intel "Elkhart Lake" GuC firmware
 version: 33.0.4
+
+[i915/ehl_guc_49.0.1.bin_base]
+desc: Intel "Elkhart Lake" GuC firmware
+version: 49.0.1
+
+[i915/ehl_guc_62.0.0.bin_base]
+desc: Intel "Elkhart Lake" GuC firmware
+version: 62.0.0
 
 [i915/ehl_huc_9.0.0.bin_base]
 desc: Intel "Elkhart Lake" HuC firmware
@@ -809,6 +949,14 @@ version: 32.0.3
 [i915/glk_guc_33.0.0.bin_base]
 desc: Intel "Geminilake" GuC firmware
 version: 33.0.0
+
+[i915/glk_guc_49.0.1.bin_base]
+desc: Intel "Geminilake" GuC firmware
+version: 49.0.1
+
+[i915/glk_guc_62.0.0.bin_base]
+desc: Intel "Geminilake" GuC firmware
+version: 62.0.0
 
 [i915/glk_huc_4.0.0.bin_base]
 desc: Intel "Geminilake" HuC firmware
@@ -834,6 +982,14 @@ version: 32.0.3
 desc: Intel "Icelake" GuC firmware
 version: 33.0.0
 
+[i915/icl_guc_49.0.1.bin_base]
+desc: Intel "Icelake" GuC firmware
+version: 49.0.1
+
+[i915/icl_guc_62.0.0.bin_base]
+desc: Intel "Icelake" GuC firmware
+version: 62.0.0
+
 [i915/icl_huc_9.0.0.bin_base]
 desc: Intel "Icelake" HuC firmware
 version: 9.0.0
@@ -857,6 +1013,14 @@ version: 32.0.3
 [i915/kbl_guc_33.0.0.bin_base]
 desc: Intel "Kabylake" GuC firmware
 version: 33.0.0
+
+[i915/kbl_guc_49.0.1.bin_base]
+desc: Intel "Kabylake" GuC firmware
+version: 49.0.1
+
+[i915/kbl_guc_62.0.0.bin_base]
+desc: Intel "Kabylake" GuC firmware
+version: 62.0.0
 
 [i915/kbl_guc_ver9_14.bin_base]
 desc: Intel "Kabylake" GuC firmware
@@ -886,6 +1050,14 @@ version: 1.26
 desc: Intel "Skylake" DMC firmware
 version: 1.27
 
+[i915/rkl_dmc_ver2_02.bin_base]
+desc: Intel "Rocketlake" DMC firmware
+version: 2.02
+
+[i915/rkl_dmc_ver2_03.bin_base]
+desc: Intel "Rocketlake" DMC firmware
+version: 2.03
+
 [i915/skl_guc_32.0.3.bin_base]
 desc: Intel "Skylake" GuC firmware
 version: 32.0.3
@@ -893,6 +1065,14 @@ version: 32.0.3
 [i915/skl_guc_33.0.0.bin_base]
 desc: Intel "Skylake" GuC firmware
 version: 33.0.0
+
+[i915/skl_guc_49.0.0.bin_base]
+desc: Intel "Skylake" GuC firmware
+version: 49.0.0
+
+[i915/skl_guc_62.0.0.bin_base]
+desc: Intel "Skylake" GuC firmware
+version: 62.0.0
 
 [i915/skl_guc_ver1.bin_base]
 desc: Intel "Skylake" GuC firmware
@@ -926,9 +1106,25 @@ version: 2.04
 desc: Intel "Tiger Lake" DMC firmware
 version: 2.06
 
+[i915/tgl_dmc_ver2_08.bin_base]
+desc: Intel "Tiger Lake" DMC firmware
+version: 2.08
+
+[i915/tgl_dmc_ver2_12.bin_base]
+desc: Intel "Tiger Lake" DMC firmware
+version: 2.12
+
 [i915/tgl_guc_35.2.0.bin_base]
 desc: Intel "Tiger Lake" GuC firmware
 version: 35.2.0
+
+[i915/tgl_guc_49.0.1.bin_base]
+desc: Intel "Tiger Lake" GuC firmware
+version: 49.0.1
+
+[i915/tgl_guc_62.0.0.bin_base]
+desc: Intel "Tiger Lake" GuC firmware
+version: 62.0.0
 
 [i915/tgl_huc_7.0.12.bin_base]
 desc: Intel "Tiger Lake" HuC firmware
@@ -938,14 +1134,51 @@ version: 7.0.12
 desc: Intel "Tiger Lake" HuC firmware
 version: 7.0.3
 
+[i915/tgl_huc_7.5.0.bin_base]
+desc: Intel "Tiger Lake" HuC firmware
+version: 7.5.0
+
+[i915/tgl_huc_7.9.3.bin_base]
+desc: Intel "Tiger Lake" HuC firmware
+version: 7.9.3
+
+[intel/irci_irci_ecr-master_20161208_0213_20170112_1500.bin_base]
+desc: Intel "Kabylake" IPU3 firmware
+version: 20161208_0213_20170112_1500
+
+[intel/ice/ddp-comms/ice_comms-1.3.20.0.pkg_base]
+desc: Intel E800 comms package
+version: 1.3.20
+
+[intel/ice/ddp/ice-1.3.26.0.pkg_base]
+desc: Intel E800 ice driver
+version: 1.3.26
+
+[lt9611uxc_fw.bin_base]
+desc: Lontium LT9611UXC DSI to HDMI bridge firmware
+version: 0x43
+
 [matrox/g200_warp.fw_base]
 desc: Matrox G200 WARP engine microcode
 
 [matrox/g400_warp.fw_base]
 desc: Matrox G400/G550 WARP engine microcode
 
+[mediatek/BT_RAM_CODE_MT7961_1_2_hdr.bin_base]
+desc: MediaTek MT7961 bluetooth firmware
+version: 20210223142901
+
 [mediatek/mt7610e.bin_base]
 desc: MediaTek MT76x0 wifi firmware
+
+[mediatek/mt7615_cr4.bin_base]
+desc: MediaTek MT7615 cr4 firmware
+
+[mediatek/mt7615_n9.bin_base]
+desc: MediaTek MT7615 n9 firmware
+
+[mediatek/mt7615_rom_patch.bin_base]
+desc: MediaTek MT7615 rom firmware
 
 [mediatek/mt7610u.bin_base]
 desc: MediaTek MT76x0 wifi firmware
@@ -962,11 +1195,23 @@ desc: MediaTek MT76x2u wifi firmware
 [mediatek/mt7662u_rom_patch.bin_base]
 desc: MediaTek MT76x2u wifi firmware
 
+[mediatek/mt7622_n9.bin_base]
+desc: MediaTek MT7622 N9 firmware
+
+[mediatek/mt7622_rom_patch.bin_base]
+desc: MediaTek MT7622 rom firmware
+
+[mediatek/mt7663pr2h.bin_base]
+desc: MediaTek MT7663 firmware
+
 [mediatek/mt7663pr2h_rebb.bin_base]
 desc: MediaTek MT7663 rebb rom firmware
 
 [mediatek/mt7663_n9_rebb.bin_base]
 desc: MediaTek MT7663 rebb n9 firmware
+
+[mediatek/mt7663_n9_v3.bin_base]
+desc: MediaTek MT7663 n9 v3 firmware
 
 [mediatek/mt7668pr2h.bin_base]
 desc: MediaTek MT7668 Bluetooth firmware
@@ -979,6 +1224,34 @@ desc: MediaTek MT7915E firmware
 
 [mediatek/mt7915_rom_patch.bin_base]
 desc: MediaTek MT7915E firmware
+
+[mediatek/mt8173/vpu_d.bin_base]
+desc: MediaTek MT8173 VPU_D firmware
+version: 1.1.16
+
+[mediatek/mt8173/vpu_p.bin_base]
+desc: MediaTek MT8173 VPU_P firmware
+version: 1.1.16
+
+[mediatek/mt8183/scp.img_base]
+desc: MediaTek mt8183 SCP firmware
+version: v12573.77
+
+[mediatek/WIFI_MT7922_patch_mcu_1_1_hdr.bin_base]
+desc: MediaTek MT7922 hdr firmware
+version: 20210727184234a
+
+[mediatek/WIFI_RAM_CODE_MT7922_1.bin_base]
+desc: MediaTek MT7922 firmware
+version: 20210727184325
+
+[mediatek/WIFI_MT7961_patch_mcu_1_2_hdr.bin_base]
+desc: MediaTek MT7921 hdr firmware
+version: 20210122002654a
+
+[mediatek/WIFI_RAM_CODE_MT7961_1.bin_base]
+desc: MediaTek MT7921 firmware
+version: 20210122002730
 
 [moxa/moxa-1110.fw_base]
 desc: MOXA UPort 1110 firmware
@@ -1070,6 +1343,81 @@ desc: Nvidia GK20A method init data
 [nvidia/gk20a/sw_nonctx.bin_base]
 desc: Nvidia GK20A non-ctx init data
 
+[nvidia/gm200/acr/bl.bin_base]
+desc: Nvidia GM200 bl firmware
+
+[nvidia/gm200/acr/ucode_load.bin_base]
+desc: Nvidia GM200 load firmware
+
+[nvidia/gm200/acr/ucode_unload.bin_base]
+desc: Nvidia GM200 unload firmware
+
+[nvidia/gm200/gr/fecs_bl.bin_base]
+desc: Nvidia GM200 FECS firmware
+
+[nvidia/gm200/gr/fecs_data.bin_base]
+desc: Nvidia GM200 FECS data
+
+[nvidia/gm200/gr/fecs_inst.bin_base]
+desc: Nvidia GM200 FECS firmware instructions
+
+[nvidia/gm200/gr/fecs_sig.bin_base]
+desc: Nvidia GM200 FECS sig firwmare
+
+[nvidia/gm200/gr/gpccs_bl.bin_base]
+desc: Nvidia GM200 GPCCS firmware
+
+[nvidia/gm200/gr/gpccs_data.bin_base]
+desc: Nvidia GM200 GPCCS data
+
+[nvidia/gm200/gr/gpccs_inst.bin_base]
+desc: Nvidia GM200 GPCCS firmware instructions
+
+[nvidia/gm200/gr/gpccs_sig.bin_base]
+desc: Nvidia GM200 GPCCS sig firmware
+
+[nvidia/gm200/gr/sw_bundle_init.bin_base]
+desc: Nvidia GM200 bundle init
+
+[nvidia/gm200/gr/sw_ctx.bin_base]
+desc: Nvidia GM200 sw ctx firmware
+
+[nvidia/gm200/gr/sw_method_init.bin_base]
+desc: Nvidia GM200 method init
+
+[nvidia/gm200/gr/sw_nonctx.bin_base]
+desc: Nvidia GM200 sw nonctx firmware
+
+[nvidia/gm204/gr/fecs_data.bin_base]
+desc: Nvidia GM204 FECS data
+
+[nvidia/gm204/gr/fecs_sig.bin_base]
+desc: Nvidia GM204 FECS sig firwmare
+
+[nvidia/gm204/gr/gpccs_data.bin_base]
+desc: Nvidia GM204 GPCCS data
+
+[nvidia/gm204/gr/gpccs_sig.bin_base]
+desc: Nvidia GM204 GPCCS sig firmware
+
+[nvidia/gm206/acr/ucode_load.bin_base]
+desc: Nvidia GM206 load firmware
+
+[nvidia/gm206/acr/ucode_unload.bin_base]
+desc: Nvidia GM206 unload firmware
+
+[nvidia/gm206/gr/fecs_data.bin_base]
+desc: Nvidia GM206 FECS data
+
+[nvidia/gm206/gr/fecs_sig.bin_base]
+desc: Nvidia GM206 FECS sig firwmare
+
+[nvidia/gm206/gr/gpccs_data.bin_base]
+desc: Nvidia GM206 GPCCS data
+
+[nvidia/gm206/gr/gpccs_sig.bin_base]
+desc: Nvidia GM206 GPCCS sig firmware
+
 [nvidia/tegra124/xusb.bin_base]
 desc: Nvidia Tegra 124 XHCI firmware
 version: 45.46
@@ -1081,6 +1429,9 @@ version: 55.15
 [nvidia/tegra194/xusb.bin_base]
 desc: Nvidia Tegra 194 XHCI firmware
 version: 60.06
+
+[nvidia/tegra194/vic.bin_base]
+desc: Nvidia Tegra 194 VIC firmware
 
 [nvidia/tegra210/xusb.bin_base]
 desc: Nvidia Tegra 210 XHCI firmware
@@ -1142,6 +1493,10 @@ version: 1
 [rt73.bin_base]
 desc: Ralink RT2571W/RT2671 (RT2501USB/RT5201USB chipset) firmware
 version: 1.8
+
+[silabs/wfm_wf200_C0.sec_base]
+desc: Silicon Labs WF200 firmware
+Version: 3.12.1
 
 [tehuti/bdx.bin_base]
 desc: Tehuti network card firmware

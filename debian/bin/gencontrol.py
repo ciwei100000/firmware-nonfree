@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 
-import os, re, sys, locale, codecs
+import json
+import locale
+import os
+import re
+import sys
+import codecs
 
 sys.path.insert(0, "debian/lib/python")
 sys.path.append(sys.argv[1] + "/lib/python")
@@ -144,6 +149,16 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
         self.config = Config()
         self.templates = Templates()
 
+        with open('debian/modinfo.json', 'r') as f:
+            self.modinfo = json.load(f)
+
+        # Make another dict keyed by firmware names
+        self.firmware_modules = {}
+        for name, info  in self.modinfo.items():
+            for firmware_filename in info['firmware']:
+                self.firmware_modules.setdefault(firmware_filename, []) \
+                                     .append(name)
+
     def __call__(self):
         packages = PackagesList()
         makefile = Makefile()
@@ -167,9 +182,6 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
             package_binary = self.process_package(entry, {})
             assert package_binary['Package'].startswith('firmware-')
             package = package_binary['Package'].replace('firmware-', '')
-
-            f = open('debian/copyright.debian')
-            open("debian/firmware-%s.copyright" % package, 'w').write(f.read())
 
             makeflags = MakeFlags()
             makeflags['FILES'] = ''
@@ -195,20 +207,13 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
         config_entry = self.config['base', package]
         vars.update(config_entry)
         vars['package'] = package
+        vars['package-env-prefix'] = 'FIRMWARE_' + package.upper().replace('-', '_')
 
         makeflags['PACKAGE'] = package
 
         binary = self.templates["control.binary"]
-        copyright = self.templates["copyright.binary"]
 
         package_dir = "debian/config/%s" % package
-
-        if os.path.exists('%s/copyright' % package_dir):
-            f = open('%s/copyright' % package_dir)
-            open("debian/firmware-%s.copyright" % package, 'w').write(f.read())
-        else:
-            vars['license'] = open("%s/LICENSE" % package_dir, 'r').read()
-            open("debian/firmware-%s.copyright" % package, 'w').write(self.substitute(copyright, vars))
 
         try:
             os.unlink('debian/firmware-%s.bug-presubj' % package)
@@ -249,7 +254,7 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
                                              f_version
                         continue
                 # Whitelist files not expected to be installed as firmware
-                if f in ['copyright', 'defines', 'LICENSE', 'LICENSE.install',
+                if f in ['defines', 'LICENSE.install',
                          'update.py', 'update.sh']:
                     continue
                 files_unused.append(f)
@@ -280,6 +285,7 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
         files_desc = ["Contents:"]
         firmware_meta_temp = self.templates["metainfo.xml.firmware"]
         firmware_meta_list = []
+        module_names = set()
 
         wrap = TextWrapper(width = 71, fix_sentence_endings = True,
                            initial_indent = ' * ',
@@ -287,6 +293,8 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
         for f in config_entry['files']:
             firmware_meta_list.append(self.substitute(firmware_meta_temp,
                                                       {'filename': f}))
+            for module_name in self.firmware_modules.get(f, []):
+                module_names.add(module_name)
             if f in links:
                 continue
             f, f_real, version = files_real[f]
@@ -305,6 +313,16 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
             else:
                 desc = "%s" % f
             files_desc.extend(wrap(desc))
+
+        modaliases = set()
+        for module_name in module_names:
+            for modalias in self.modinfo[module_name]['alias']:
+                modaliases.add(modalias)
+        modalias_meta_list = [
+            self.substitute(self.templates["metainfo.xml.modalias"],
+                            {'alias': alias})
+            for alias in sorted(list(modaliases))
+        ]
 
         packages_binary = self.process_packages(binary, vars)
 
@@ -338,6 +356,7 @@ You must agree to the terms of this license before it is installed."""
         makefile.add('binary-indep', cmds = ["$(MAKE) -f debian/rules.real binary-indep %s" % makeflags])
 
         vars['firmware-list'] = ''.join(firmware_meta_list)
+        vars['modalias-list'] = ''.join(modalias_meta_list)
         # Underscores are preferred to hyphens
         vars['package-metainfo'] = package.replace('-', '_')
         # Summary must not contain line breaks
