@@ -5,18 +5,17 @@ import locale
 import os
 import re
 import sys
-import codecs
 
 sys.path.insert(0, "debian/lib/python")
 sys.path.append(sys.argv[1] + "/lib/python")
 locale.setlocale(locale.LC_CTYPE, "C.UTF-8")
 
 from config import Config
-from debian_linux.debian import Package, PackageRelation
+from debian_linux.debian import BinaryPackage, PackageRelation
 from debian_linux.debian import PackageDescription as PackageDescriptionBase
 import debian_linux.gencontrol
 from debian_linux.gencontrol import Makefile, MakeFlags, PackagesList
-from debian_linux.utils import TextWrapper, read_control
+from debian_linux.utils import TextWrapper, read_control, read_control_source
 from debian_linux.utils import Templates as TemplatesBase
 from collections import OrderedDict
 
@@ -54,7 +53,7 @@ class PackageDescription(PackageDescriptionBase):
             for i in desc:
                 self.append(i)
 
-Package._fields['Description'] = PackageDescription
+BinaryPackage._fields['Description'] = PackageDescription
 
 class Template(dict):
     _fields = OrderedDict((
@@ -95,19 +94,19 @@ class Templates(TemplatesBase):
     def _read(self, name):
         prefix, id = name.split('.', 1)
 
-        for suffix in ['.in', '']:
-            for dir in self.dirs:
-                filename = "%s/%s%s" % (dir, name, suffix)
-                if os.path.exists(filename):
-                    with codecs.open(filename, 'r', 'utf-8') as f:
-                        mode = os.stat(f.fileno()).st_mode
-                        if prefix == 'control':
-                            return (read_control(f), mode)
-                        elif prefix == 'templates':
-                            return (self._read_templates(f), mode)
-                        return (f.read(), mode)
-    
-    
+        for dir in self.dirs:
+            filename = "%s/%s.in" % (dir, name)
+            if os.path.exists(filename):
+                with open(filename) as f:
+                    mode = os.stat(f.fileno()).st_mode
+                    if name == 'control.source':
+                        return (read_control_source(f), mode)
+                    if prefix == 'control':
+                        return (read_control(f), mode)
+                    elif prefix == 'templates':
+                        return (self._read_templates(f), mode)
+                    return (f.read(), mode)
+
     def _read_templates(self, f):
         entries = []
 
@@ -276,11 +275,11 @@ class GenControl(debian_linux.gencontrol.Gencontrol):
             print('W: %s: unused files:' % package, ' '.join(files_unused),
                   file=sys.stderr)
 
-        makeflags['FILES'] = ' '.join(["%s:%s" % (i[1], i[0]) for i in files_real.values()])
+        makeflags['FILES'] = ' '.join(["%s:%s" % (i[1], i[0]) for i in sorted(files_real.values())])
         vars['files_real'] = ' '.join(["/lib/firmware/%s" % i for i in config_entry['files']])
 
         makeflags['LINKS'] = ' '.join(["%s:%s" % (link, target)
-                                       for link, target in links.items()])
+                                       for link, target in sorted(links.items())])
 
         files_desc = ["Contents:"]
         firmware_meta_temp = self.templates["metainfo.xml.firmware"]
