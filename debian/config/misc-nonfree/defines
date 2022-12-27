@@ -123,6 +123,8 @@ files:
  i915/dg2_dmc_ver2_06.bin
  i915/dg2_dmc_ver2_07.bin
  i915/dg2_dmc_ver2_08.bin
+ i915/dg2_huc_gsc.bin
+ i915/mtl_dmc_ver2_10.bin
  i915/ehl_guc_33.0.4.bin
  i915/ehl_guc_49.0.1.bin
  i915/ehl_guc_62.0.0.bin
@@ -199,6 +201,7 @@ files:
  intel/ice/ddp-comms/ice_comms-1.3.31.0.pkg
  intel/ice/ddp/ice-1.3.30.0.pkg
  intel/ice/ddp/ice.pkg
+ intel/ice/ddp-wireless_edge/ice_wireless_edge-1.3.7.0.pkg
  kaweth/new_code.bin
  kaweth/new_code_fix.bin
  kaweth/trigger_code.bin
@@ -224,9 +227,15 @@ files:
  mediatek/mt7663_n9_rebb.bin
  mediatek/mt7663_n9_v3.bin
  mediatek/mt7668pr2h.bin
+ mediatek/mt7915_eeprom.bin
+ mediatek/mt7915_eeprom_dbdc.bin
  mediatek/mt7915_wm.bin
  mediatek/mt7915_wa.bin
  mediatek/mt7915_rom_patch.bin
+ mediatek/mt7916_wm.bin
+ mediatek/mt7916_wa.bin
+ mediatek/mt7916_rom_patch.bin
+ mediatek/mt7916_eeprom.bin
  mediatek/mt8173/vpu_d.bin
  mediatek/mt8173/vpu_p.bin
  mediatek/mt8183/scp.img
@@ -236,6 +245,18 @@ files:
  mediatek/WIFI_RAM_CODE_MT7922_1.bin
  mediatek/WIFI_MT7961_patch_mcu_1_2_hdr.bin
  mediatek/WIFI_RAM_CODE_MT7961_1.bin
+ mediatek/mt8192/scp.img
+ mediatek/mt8195/scp.img
+ mediatek/mt7986_eeprom_mt7976.bin
+ mediatek/mt7986_eeprom_mt7976_dbdc.bin
+ mediatek/mt7986_eeprom_mt7976_dual.bin
+ mediatek/mt7986_eeprom_mt7975_dual.bin
+ mediatek/mt7986_wm.bin
+ mediatek/mt7986_wm_mt7975.bin
+ mediatek/mt7986_wa.bin
+ mediatek/mt7986_rom_patch.bin
+ mediatek/mt7986_rom_patch_mt7975.bin
+ mediatek/BT_RAM_CODE_MT7922_1_1_hdr.bin
  moxa/moxa-1110.fw
  moxa/moxa-1130.fw
  moxa/moxa-1131.fw

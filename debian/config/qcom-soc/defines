@@ -66,7 +66,6 @@ files:
  qcom/vpu-1.0/venus.mbn
  qcom/vpu-1.0/venus.mdt
  qcom/vpu-2.0/venus.mbn
- qcom/vpu-2.0/venus.mdt
 
 
 [qcom/a300_pfp.fw_base]
@@ -245,6 +244,3 @@ desc: Qualcomm Venus VPU-1.0 firwmare header
 
 [qcom/vpu-2.0/venus.mbn]
 desc: Qualcomm Venus VPU-2.0 firwmare
-
-[qcom/vpu-2.0/venus.mdt]
-desc: Qualcomm Venus VPU-1.0 firwmare header

@@ -68,6 +68,7 @@ files:
  rtl_nic/rtl8411-2.fw
  rtlwifi/rtl8188efw.bin
  rtlwifi/rtl8188eufw.bin
+ rtlwifi/rtl8188fufw.bin
  rtlwifi/rtl8192cfw.bin
  rtlwifi/rtl8192cfwU_B.bin
  rtlwifi/rtl8192cfwU.bin
@@ -109,6 +110,7 @@ files:
  rtw88/rtw8822c_wow_fw.bin
  rtw88/rtw8723d_fw.bin
  rtw89/rtw8852a_fw.bin
+ rtw89/rtw8852b_fw.bin
  rtw89/rtw8852c_fw.bin
 
 longdesc: Realtek Ethernet, wifi and Bluetooth adapters supported by various

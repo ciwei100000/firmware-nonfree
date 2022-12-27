@@ -43,6 +43,15 @@ files:
  intel/ibt-1040-0041.sfi
  intel/ibt-0041-0041.ddc
  intel/ibt-0041-0041.sfi
+ intel/ibt-0040-1020.sfi
+ intel/ibt-0040-1020.ddc
+ intel/ibt-1040-1020.sfi
+ intel/ibt-1040-1020.ddc
+ intel/ibt-0040-2120.sfi
+ intel/ibt-0040-2120.ddc
+ intel/ibt-1040-2120.sfi
+ intel/ibt-1040-2120.ddc
+ intel/ibt-0040-4150.sfi
  intel/ibt-0040-4150.ddc
  intel/ibt-0040-4150.sfi
  intel/ibt-1040-4150.ddc
@@ -172,6 +181,42 @@ files:
  iwlwifi-so-a0-hr-b0-71.ucode
  iwlwifi-so-a0-jf-b0-71.ucode
  iwlwifi-so-a0-jf-b0-72.ucode
+ iwlwifi-cc-a0-73.ucode
+ iwlwifi-Qu-b0-hr-b0-73.ucode
+ iwlwifi-Qu-b0-jf-b0-73.ucode
+ iwlwifi-Qu-c0-hr-b0-73.ucode
+ iwlwifi-Qu-c0-jf-b0-73.ucode
+ iwlwifi-QuZ-a0-hr-b0-73.ucode
+ iwlwifi-QuZ-a0-jf-b0-73.ucode
+ iwlwifi-ty-a0-gf-a0-73.ucode
+ iwlwifi-so-a0-gf4-a0-73.ucode
+ iwlwifi-so-a0-gf-a0-73.ucode
+ iwlwifi-so-a0-hr-b0-73.ucode
+ iwlwifi-so-a0-jf-b0-73.ucode
+ iwlwifi-cc-a0-74.ucode
+ iwlwifi-Qu-b0-hr-b0-74.ucode
+ iwlwifi-Qu-b0-jf-b0-74.ucode
+ iwlwifi-Qu-c0-hr-b0-74.ucode
+ iwlwifi-Qu-c0-jf-b0-74.ucode
+ iwlwifi-QuZ-a0-hr-b0-74.ucode
+ iwlwifi-QuZ-a0-jf-b0-74.ucode
+ iwlwifi-ty-a0-gf-a0-74.ucode
+ iwlwifi-so-a0-gf4-a0-74.ucode
+ iwlwifi-so-a0-gf-a0-74.ucode
+ iwlwifi-so-a0-hr-b0-74.ucode
+ iwlwifi-so-a0-jf-b0-74.ucode
+ iwlwifi-cc-a0-77.ucode
+ iwlwifi-Qu-b0-hr-b0-77.ucode
+ iwlwifi-Qu-b0-jf-b0-77.ucode
+ iwlwifi-Qu-c0-hr-b0-77.ucode
+ iwlwifi-Qu-c0-jf-b0-77.ucode
+ iwlwifi-QuZ-a0-hr-b0-77.ucode
+ iwlwifi-QuZ-a0-jf-b0-77.ucode
+ iwlwifi-ty-a0-gf-a0-77.ucode
+ iwlwifi-so-a0-gf4-a0-77.ucode
+ iwlwifi-so-a0-gf-a0-77.ucode
+ iwlwifi-so-a0-hr-b0-77.ucode
+ iwlwifi-so-a0-jf-b0-77.ucode
 longdesc: Intel Wireless cards supported by the iwl3945, iwl4965, and
  iwlwifi drivers
 
