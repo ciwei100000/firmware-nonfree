@@ -1,3 +1,9 @@
+firmware-nonfree (20221214-3+custom1) unstable; urgency=medium
+
+  * add missing firmwares
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Mon, 26 Dec 2022 23:09:24 -0800
+
 firmware-nonfree (20221214-3) unstable; urgency=medium
 
   * iwlwifi: linux-firmware: Update firmware file for Intel Bluetooth AX211
