@@ -1,3 +1,9 @@
+firmware-nonfree (20230117-1+custom1) unstable; urgency=medium
+
+  * Merge tag 'debian/20230117-1' into ciwei100000
+
+ -- Xuqing Liu <ciwei100000@gmail.com>  Sat, 4 Feb 2023 19:15:00 -0800
+
 firmware-nonfree (20230117-1) unstable; urgency=medium
 
   * New upstream version:
