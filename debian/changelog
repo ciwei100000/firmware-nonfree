@@ -1,3 +1,85 @@
+firmware-nonfree (20230117-1) unstable; urgency=medium
+
+  * New upstream version:
+    - atheros: qca: Update firmware files for BT chip WCN6750
+    - amd-graphics: Update renoir PSP firmware
+    - amd-graphics: update renoir DMCUB firmware
+
+  [ Didier Raboud ]
+  * misc-nonfree: Update firmware for mediatek bluetooth chip (MT7922)
+  * misc-nonfree: Update firmware for mediatek bluetooth chip (MT7921)
+  * misc-nonfree: Update firmware for MT7922 WiFi device
+  * misc-nonfree: Update firmware for MT7921 WiFi device
+  * misc-nonfree: Update firmware cxgb4 to revision 1.27.1.0
+  * amd-graphics: Update copyright date
+  * iwlwifi: update 9000-family firmwares to core75-47
+  * iwlwifi: update PNVM firmwares from core76-35 release
+  * amd-graphics: update GC11.0.0 firmware from amd-5.4
+  * amd-graphics: update PSP13.0.0 firmware from amd-5.4
+  * amd-graphics: update SDMA6.0.0 firmware from amd-5.4
+  * amd-graphics: update SMU13.0.0 firmware from amd-5.4
+  * amd-graphics: update VCN4.0.0 firmware from amd-5.4
+  * amd-graphics: add DCN3.2.1 firmware from amd-5.4
+  * amd-graphics: add GC11.0.2 firmware from amd-5.4
+  * amd-graphics: add PSP13.0.7 firmware from amd-5.4
+  * amd-graphics: add SDMA6.0.2 firmware from amd-5.4
+  * amd-graphics: add SMU13.0.7 firmware from amd-5.4
+  * amd-graphics: add VCN4.0.4 firmware from amd-5.4
+  * iwlwifi: Update firmware file for Intel Bluetooth 9260
+  * iwlwifi: Update firmware file for Intel Bluetooth 9560
+  * iwlwifi: Update firmware file for Intel Bluetooth AX200
+  * iwlwifi: Update firmware file for Intel Bluetooth AX210
+  * iwlwifi: Update firmware file for Intel Bluetooth AX211
+  * iwlwifi: Update firmware file for Intel Bluetooth AX201
+  * realtek: rtw89: 8852c: update fw to v0.27.56.10
+  * Update modinfo from linux 6.1.0-3 on amd64
+
+  [ Salvatore Bonaccorso ]
+  * realtek: rtw89: 8852b: Add firmware to support RTL8852B chip
+    (Closes: #1029708)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 31 Jan 2023 21:35:58 +0100
+
+firmware-nonfree (20221214-5) unstable; urgency=medium
+
+  * Add lintian overrides to appease bullseye's lintian:
+     - license-problem-non-free-RFC (source): not needed for non-free
+       packages, but needed since the move to non-free-firmware (which
+       lintian 2.104.0 doesn't know about).
+     - binary-with-bad-dynamic-table (firmware-qcom-soc): duplicate the
+       existing override, without square brackets (since override formats
+       changed across lintian versions).
+
+ -- Cyril Brulebois <kibi@debian.org>  Fri, 27 Jan 2023 19:47:36 +0100
+
+firmware-nonfree (20221214-4) unstable; urgency=medium
+
+  [ Cyril Brulebois ]
+  * Update to linux-support 6.1.0-1
+  * Update to the new linux-support API:
+     - Replace self.templates[foo] with self.templates.get*(foo),
+       merging the self.process_package() substitution in passing.
+     - Replace makefile.add() with makefile.add_cmds().
+     - Make Template inherit from _ControlFileDict, and use OrderedDict to
+       define its fields. Use PackageDescriptionBase directly for the
+       Description.
+     - Simplify Templates, only adding a get_templates_control() method to
+       the base class.
+     - Use get_templates_control() and an append() to include the license
+       in the templates.
+     - Avoid KeyError during substitutions by renaming @?variable@ into
+       @variable@, listing each such variable as optional (so that the
+       placeholder gets replaced with an empty string if that variable is
+       not set in the config).
+     - salsa-ci: install python3-jinja2
+  * Move source and binaries from non-free/* to non-free-firmware/*
+    following the 2022 General Resolution about non-free firmware.
+
+  [ Bastian Blank ]
+  * Update to linux-support 6.1.0-2
+
+ -- Bastian Blank <waldi@debian.org>  Tue, 24 Jan 2023 12:19:29 +0100
+
 firmware-nonfree (20221214-3+custom1) unstable; urgency=medium
 
   * add missing firmwares
